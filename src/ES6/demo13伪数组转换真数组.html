@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</body>
+<script>
+  var oDivs= document.getElementsByTagName('div');
+  var arr={
+    "0":"box",
+    "1":18,
+    length:2
+  }
+  let newArray=[...oDivs]; //扩展运算符
+ // var newArray = Array.from(arr);
+  //var newArray = Array.prototype.slice.call(arr);
+  console.log(newArray);
+
+</script>
+</html>

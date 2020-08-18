@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>三棱柱</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    #wrap{
+      width: 500px;
+      height: 500px;
+      border: solid 1px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      perspective: 2000px;
+
+    }
+    #wrap #container{
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transform-style: preserve-3d;
+      transition: 2s transform linear;
+
+    }
+    #container div{
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      margin: auto;
+      background: red;
+      line-height: 200px;
+      text-align: center;
+      border: solid 1px;
+      box-sizing: border-box;  /* 让每个正方形边框连在一起*/
+      left: 50px;
+      top: 50px;
+
+    }
+    #container:hover{
+      transform: rotateY(360deg);
+    }
+
+
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div id="container">
+
+  </div>
+</div>
+
+</body>
+<script>
+  /*封装的话 传参 1棱数 2棱长 3基点长度(图形的交汇中心点) */
+  /*这次长度就先200算 因为我没有和外面容器一样大小 要是改值后 还要考虑居中*/
+
+  window.onload=function () {
+    free(6,200);
+    function free(Lnum,Lsize) {
+      var wj=360/Lnum; //外角
+      var nj=180-wj;//内角
+     var conNode= document.querySelector("#wrap #container");
+      var vsty= document.createElement("style");
+      var center=Math.tan(nj/360*Math.PI)*Lsize/2;
+      for (var i = 0; i <Lnum ; i++) {
+        conNode.innerHTML+="<div>"+(i+1)+"</div>";
+        vsty.innerHTML+="#container div:nth-child("+(i+1)+"){\n" +
+          "      transform: rotateY("+wj*i+"deg);\n" +
+          "  }"
+      //转的是外角
+      }
+      //基点 Y轴向内为负 否则字是倒着的
+      vsty.innerHTML+="#wrap #container{transform-origin: center center -"+center+"px;} "
+      vsty.innerHTML+="#container div{transform-origin: center center -"+center+"px;} "
+      document.head.appendChild(vsty);
+
+    }
+   //基本思路  外角 内角    根据tan函数求基点(内角) 沿Y轴用外角
+  }
+
+</script>
+</html>
+

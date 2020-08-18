@@ -1,0 +1,198 @@
+{
+  "id": "1981081",
+  "name": "JDG",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3141397",
+      "name": "左箭头",
+      "font_class": "arrow-left-copy",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "3267159",
+      "name": "左箭头",
+      "font_class": "icon1",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "3523476",
+      "name": "左箭头",
+      "font_class": "arrow-right",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "5449918",
+      "name": "左箭头",
+      "font_class": "arrow-right1",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "5966373",
+      "name": "左箭头",
+      "font_class": "arrow-right2",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "6927542",
+      "name": "左箭头",
+      "font_class": "arrow-right-copy-copy",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "7853028",
+      "name": "左箭头",
+      "font_class": "xiangyou1",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "10742676",
+      "name": "左箭头",
+      "font_class": "right-angle",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "13290208",
+      "name": "左箭头",
+      "font_class": "arrow-right3",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "1253742",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "2326503",
+      "name": "放大镜",
+      "font_class": "fangdajing1",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "4474981",
+      "name": "放大镜",
+      "font_class": "fangdajing2",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "5608339",
+      "name": "放大镜",
+      "font_class": "fangdajing3",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "12575798",
+      "name": "放大镜",
+      "font_class": "fangdajing4",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "13082980",
+      "name": "放大镜",
+      "font_class": "fangdajing5",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
+    },
+    {
+      "icon_id": "14131198",
+      "name": "放大镜",
+      "font_class": "fangdajing6",
+      "unicode": "e789",
+      "unicode_decimal": 59273
+    },
+    {
+      "icon_id": "49674",
+      "name": "照相机",
+      "font_class": "13",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "1116195",
+      "name": "照相机",
+      "font_class": "zhaoxiangji",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "2518839",
+      "name": "照相机",
+      "font_class": "zhaoxiangji1",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "8330347",
+      "name": "照相机",
+      "font_class": "zhaoxiangji2",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "8409551",
+      "name": "照相机",
+      "font_class": "zhaoxiangji3",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "11136513",
+      "name": "照相机 摄影",
+      "font_class": "zhaoxiangjisheying",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "12500450",
+      "name": "照相机",
+      "font_class": "zhaoxiangji4",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "15727067",
+      "name": "向下",
+      "font_class": "down1",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "11898680",
+      "name": "向下",
+      "font_class": "down",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12865651",
+      "name": "cart",
+      "font_class": "cart",
+      "unicode": "e6e6",
+      "unicode_decimal": 59110
+    },
+    {
+      "icon_id": "15838429",
+      "name": "arrow-down",
+      "font_class": "arrow-down",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    }
+  ]
+}

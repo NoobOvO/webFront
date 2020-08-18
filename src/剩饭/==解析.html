@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  //  JS的==和强制类型转换不一样 又是另一套规则 分为 有和没有
+  //Number Boolean Object String(有)
+  //Undefined和Null(没有)
+  //NaN不等于NaN
+  //引用数值比较 比较的两个数栈的地址值
+
+  //那些引用数值类型转换 一般是先valueOf() 然后toString()   []=>""=>0 [1,2,3,4]=>1,2,3,4=>NaN
+  // Number([1,2,3,4].valueOf().toString())    NaN
+
+  console.log(null==undefined);
+  //  ==的比较趋于数字化 两边转换为数字
+  console.log([]==false);
+
+var arr=[1,2,3,4]
+ var res= Number(arr);
+console.log(res,typeof res)  //NaN   类型为number  NaN也属于数字
+
+</script>
+</html>

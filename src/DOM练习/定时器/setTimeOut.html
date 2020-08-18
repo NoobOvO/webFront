@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Otto</title>
+</head>
+<body>
+
+</body>
+<script>
+  //延时定时器
+  //返回值是个定时器ID这个ID可以通过clearOut来清楚
+  var timer=window.setTimeout(function (a,b,c) {
+    console.log(a,b,c)
+  },3000,1,2,3)
+
+  setTimeout(function () {
+    clearTimeout(timer)
+  },2000)
+
+
+</script>
+</html>

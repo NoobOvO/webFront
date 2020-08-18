@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+#wrap{
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+/*让ul和父元素一样大*/
+#wrap .list{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+}
+
+
+#wrap .list li{
+  list-style: none;
+  width: 3px;
+  height: 15px;
+  position: absolute;
+  left: 148px;
+  top: 0;
+  background: black;
+  transform-origin: center 150px;
+
+
+}
+#wrap .list li:nth-child(6n+1){
+  height: 25px;
+  width: 3px;
+}
+#wrap .cir{
+  width: 30px;
+  height: 30px;
+  background-color: pink;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  z-index: 1;
+  text-align: center;
+  line-height: 30px;
+
+}
+
+#wrap .hour{
+  width: 10px;
+  height: 55px;
+  background-color: black;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -5px;
+  margin-top: -45px;
+  transform-origin: center 45px;
+
+}
+#wrap .min{
+  width: 4px;
+  height: 70px;
+  background-color: gray;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -60px;
+  transform-origin: center 60px;
+
+}
+#wrap .sec{
+  width: 2px;
+  height: 110px;
+  background-color: red;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -1px;
+  margin-top: -110px;
+  transform-origin: center 100px;
+  transition: 1s transform linear;
+
+}
+
+
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <!--罗盘-->
+  <div class="cir">
+   辣
+  </div>
+  <!--时钟-->
+  <div class="hour"></div>
+  <!--分钟-->
+  <div class="min"></div>
+  <!--秒钟-->
+  <div class="sec"></div>
+    <ul class="list">
+
+    </ul>
+
+</div>
+
+</body>
+<script>
+  window.onload=function () {
+     var listNode=document.querySelector("#wrap .list");
+     var liNode=document.querySelectorAll("#wrap .list li");
+     var  styleNode=document.createElement("style");
+     for (var i=0;i<60;i++){
+       listNode.innerHTML+="<li></li>";
+       styleNode.innerHTML+="#wrap .list li:nth-child("+(i+1)+"){transform: rotate("+6*i+"deg)}";
+
+     }
+    document.head.appendChild(styleNode);
+     //让时钟转起来
+    var hourNode=document.querySelector("#wrap .hour");
+    var minNode=document.querySelector("#wrap .min");
+    var secNode=document.querySelector("#wrap .sec");
+
+    var date=new Date();
+    //指针的当前时间
+    secNode.sec=date.getSeconds()*6;
+    minNode.min=date.getMinutes()*6;
+    hourNode.hour=date.getHours()*30;
+
+       setInterval(fn,1000);
+       fn();//为了去除初始刷新的效果
+    //之前的方案不行的原因 不累加的话 获得秒数最大为60 0-60依次循环 动画过渡为1秒 所以说60S后 又会重新转到0S 以下为累加的方式 不会出现重置效果
+       function fn() {
+         var sec=secNode.sec+6;
+         var min=minNode.min+6/60;
+         var hour=hourNode.hour+(30/(60*60));
+
+         secNode.style.transform="rotate("+sec+"deg)";
+         //后面加的值 是为了让指针走的顺滑 否则就是过一分钟 直接跨了6度 而不是一度一度的走
+         minNode.style.transform="rotate("+min+"deg)";
+         //小时只会转12个刻度  360/12
+         hourNode.style.transform="rotate("+hour+"deg)";
+
+         secNode.sec=sec;
+         minNode.min=min;
+         hourNode.hour=hour;
+       }
+
+
+  }
+</script>
+</html>

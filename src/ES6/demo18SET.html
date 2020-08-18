@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>一种数组的数据类型,没有索引</p>
+</body>
+<script>
+  const st=new Set();
+  st.add("hello");
+  st.add("io");
+  st.add("java");
+  st.add("python");
+  //有size 没有length属性
+  //数据是唯一的 不能重复 如果重复就忽略掉
+  const interor=st.values();
+  for (let vt of st){
+    console.log(vt);
+  }
+  const arr=[1,2,34,5,63,1,2,1,1,1,2,3,4];
+  const arrSet=new Set(arr);
+  console.log(arrSet);
+
+</script>
+</html>

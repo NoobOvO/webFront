@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开机动画</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body,html{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #wrap{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+    }
+    #wrap{
+      background: url("img/1.jpg");
+      animation: 15s backg infinite linear;
+    }
+    @keyframes backg {
+      from{
+        background-position: 0,0;
+      }
+      to{
+        background-position: 1920px,0;
+      }
+    }
+
+    #wk{
+      height: 200px;
+      width: 180px;
+      background: url("img/west_01_3ca39fe.png") no-repeat ;
+      animation: 1s wkbj steps(8) infinite;
+      position: absolute;
+      left: -450px;
+      top: -30px;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+
+    }
+    #bj{
+      height: 200px;
+      width: 180px;
+      background: url("img/west_02_47bad19.png") no-repeat ;
+      animation: 1s wkbj steps(8) infinite;
+      position: absolute;
+      left: -180px;
+      top: -30px;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    @keyframes wkbj{
+      from{
+        background-position: 0,0;
+      }
+      to{
+        background-position: -1600px,0;
+      }
+    }
+
+
+
+    #ts{
+      height: 240px;
+      width: 170px;
+      background: url("img/west_03_f962447.png") no-repeat ;
+      animation: 1s ts steps(8) infinite;
+      position: absolute;
+      left: 60px;
+      top: -30px;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    @keyframes ts{
+      from{
+        background-position: 0,0;
+      }
+      to{
+        background-position: -1360px,0;
+      }
+    }
+
+
+
+    #ss{
+      height: 200px;
+      width: 210px;
+      background: url("img/west_04_6516d80.png") no-repeat ;
+      animation: 1s ss steps(8) infinite;
+      position: absolute;
+      left: 350px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    @keyframes ss{
+      from{
+        background-position: 0,0;
+      }
+      to{
+        background-position: -1680px,0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div id="wk"></div>
+  <div id="bj"></div>
+  <div id="ts"></div>
+  <div id="ss"></div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

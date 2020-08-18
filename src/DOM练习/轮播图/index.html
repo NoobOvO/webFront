@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BannerImg</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style type="text/less">
+    #wrap{
+
+      #app{
+        cursor: pointer;
+         height: 280px;
+        width: 520px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin:auto;
+        border: 2px solid;
+        overflow: hidden;
+
+        &:hover span{
+          display: block;
+        }
+
+        span{
+          font-size: 40px;
+          width: 40px;
+          height: 60px;
+          background:rgba(128,128,128,.4) ;
+          position: absolute;
+          color: white;
+          text-align: center;
+          line-height: 60px;
+          top: 50%;
+          margin-top: -30px;
+          display: none;
+
+          &:hover{
+            background:rgba(128,128,128,.9) ;
+            cursor: pointer;
+          }
+
+        }
+        & .pre{
+          left: 10px;
+        }
+        & .next{
+          right: 10px;
+        }
+
+        .list{
+         list-style: none;
+          width: 2600px;
+          height:280px ;
+          position: absolute;
+
+
+
+          .item{
+            float: left;
+
+          }
+
+        }
+
+
+      }
+
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+ <div id="app">
+
+   <ul class="list">
+     <li class="item">
+       <img src="img/b1.jpg">
+     </li>
+     <li class="item">
+       <img src="img/b2.jpg">
+     </li>
+     <li class="item">
+       <img src="img/b3.jpg">
+     </li>
+     <li class="item">
+       <img src="img/b4.jpg">
+     </li>
+     <li class="item">
+       <img src="img/b5.jpg">
+     </li>
+   </ul>
+   <span class="pre">&lt;</span>
+   <span class="next">&gt;</span>
+ </div>
+</div>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+<script>
+  window.onload=function () {
+
+
+
+    function banner() {
+      var pre=document.querySelector(".pre");
+     var next= document.querySelector(".next");
+     var list= document.querySelector(".list");
+
+
+     pre.onclick=function () {
+       move(520);
+     }
+
+      next.onclick=function () {
+        move(-520);
+      }
+     function move(dis) {
+           var L=list.offsetLeft+dis;
+           L=L>0?-2080:L;
+           L=L<-2080?0:L;
+           //我怎么理解的-520  相对于当前位置
+       //踩得坑  ul列表别忘了绝对定位 不然left变不了
+
+       list.style.left=L+"px";
+     }
+
+    }
+
+    banner();
+
+
+
+
+
+
+  }
+
+
+
+</script>
+</html>

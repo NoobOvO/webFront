@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MI</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .banner{
+      width: 1226px;
+      height: 460px;
+      margin: 100px auto 0 auto;
+      /*background: lime;*/
+      position: relative;
+    }
+    .banner ul li a{
+      display: block;
+    }
+    img{
+      /*
+      转成块元素,防止有留白
+       */
+      display: block;
+    }
+    .banner .nav{
+      height: 460px;
+      width: 234px;
+      position: absolute;
+      background-color: black;
+      left: 0px;
+      top: 0px;
+      opacity: 0.6;
+    }
+    .banner span{
+      width: 41px;
+      height: 69px;
+      background: url("img/mi11.png") no-repeat -84px 0px;
+      color: #fff;
+      position: absolute;
+      left: 234px;
+      top: 50%;
+      margin-top: -34px;
+      text-align: center;
+      line-height: 69px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .banner .nav-right{
+      background-position-x: -126px;
+     /* background: url("img/mi11.png") no-repeat -126px 0px;*/
+      right: 0;
+      /*
+      因为上面两个标签同时用了left属性,并都起了作用,所以为了让left不起作用
+      用auto属性
+       */
+      left: auto;
+    }
+    .banner .nav-right:hover{
+      background-position-x: -42px;
+     /* background: url("img/mi11.png") no-repeat -42px 0px;*/
+    }
+    .banner .nav-left:hover{
+      background-position-x: 0px;
+     /* background: url("img/mi11.png") no-repeat 0px 0px;*/
+    }
+
+    .banner .point{
+      position: absolute;
+      right: 43px;
+      bottom: 32px;
+    }
+    .banner .point li{
+      float: left;
+      width: 6px;
+      height: 6px;
+      background-color: #746a95;
+      border: 2px #9e97b5 solid;
+      border-radius: 50%;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .banner .point .current{
+      background-color: #dad0fb;
+      border-color: #9e97b5;
+    }
+  </style>
+</head>
+<body>
+<div class="banner">
+  <div class="nav">
+
+  </div>
+  <ul>
+    <li>
+      <a href="##">
+        <img src="img/phone1.jpg" width="1226px">
+      </a>
+    </li>
+  </ul>
+  <span class="nav-left"></span>
+  <span class="nav-right"></span>
+
+  <ol class="point">
+    <li></li>
+    <li class="current"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol>
+</div>
+
+</body>
+</html>
+

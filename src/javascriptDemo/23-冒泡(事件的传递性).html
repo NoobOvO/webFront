@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MP</title>
+  <style>
+    #wrap{
+      background-color: lime;
+      width: 500px;
+      height: 500px;
+    }
+    #app{
+      background-color: red;
+      width: 400px;
+      height: 400px;
+    }
+    #hh{
+      background-color: yellow;
+      width: 300px;
+      height: 300px;
+    }
+    #cs{
+      background-color: salmon;
+      width: 200px;
+      height: 200px;
+    }
+    #co{
+      background-color:  teal;
+      width: 100px;
+      height: 100px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+<div id="wrap">
+  wrap
+  <div id="app">
+    app
+    <div id="hh">
+      hh
+      <div id="cs">
+        cs
+        <div id="co">
+          co
+
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+</body>
+<script>
+window.onload=function () {
+  //谷歌浏览器 的测试功能 直接用ID属性发动事件 测试用哦  开发用 打死你
+  //你点击嵌套最里面的标签  事件会进行传播 事件效果扩散到最外面(相同事件)
+  wrap.onclick=function () {
+    console.log("wrap")
+  }
+  app.onclick=function () {
+    console.log("app")
+  }
+  hh.onclick=function () {
+    console.log("hh")
+  }
+  cs.onclick=function () {
+    console.log("cs")
+  }
+  co.onclick=function () {
+    console.log("co")
+  }
+}
+
+
+
+</script>
+</html>

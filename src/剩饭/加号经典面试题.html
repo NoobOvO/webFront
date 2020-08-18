@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  console.log({}+[])  //如果你在浏览器控制台输入的话  左边是0+0  {}会被浏览器看成一个代码块  分别先ofValue() 然后toString() 最后判断+是运算符还是拼接 字符串
+  console.log([]+{}) //这个{}被看成一个对象 最后两个toString就是 ""+[object Object] 这个+号就是连接符
+
+
+/*  if({}){
+    console.log("helloworld")
+  }  //虽然这是个空对象 但这是真值啊*/
+
+console.log(""||null); //   翻译过来就是  ""?"":null;         a&&b 翻译 a?b:a
+
+</script>
+</html>

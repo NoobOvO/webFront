@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>照片墙</title>
+  <style>
+    html,body{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    #wrap{
+      width: 510px;
+      height: 510px;
+      border: 1px solid red;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+
+
+    }
+    #wrap img{
+      width: 150px;
+      height: 150px;
+      float: left;
+      margin: 10px;
+
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <img src="img/a1.png">
+  <img src="img/a2.png">
+  <img src="img/a3.png">
+  <img src="img/a4.png">
+  <img src="img/a5.png">
+  <img src="img/a6.png">
+  <img src="img/a7.png">
+  <img src="img/a8.png">
+  <img src="img/a9.png">
+
+
+</div>
+</body>
+<script>
+  window.onload=function () {
+    //需求分析:
+    //1.移动时每个元素的层级为最高
+    //2.让碰撞的元素有红色边框
+    //3.自己的Node没有红色边框
+    //4.之前的相交元素数组清空
+    //5.之前的红色边框样式清除
+
+    //1.最近的照片 边框变色
+
+
+    //碰撞的元素变黄 自己不能变黄 碰撞元素的集合记得清空(不然这个集合要炸了) 变色前记得让所有的元素没有颜色
+
+
+
+    //布局转换
+    function imgChange() {
+      var zIndexr=0;//层级 让每个图片在最上面
+      var imgNodes=document.querySelectorAll("#wrap img");
+      //清除外边距 便于拖拽
+      //push是放入数组里
+      var disOff=[];//存放所有图片的信息数组 用来覆盖原来绝对定位的初始值0
+      imgNodes.forEach(function (item,index) {
+        disOff.push({
+          left:item.offsetLeft,
+          top:item.offsetTop
+        })
+
+      })
+      imgNodes.forEach(function (item,index) {
+        //每个Img元素先设置为绝对定位 初始值为0 在用数组里的数值替换定位的距离
+        //最后在把margin设置为0 替换掉原来的margin 这样margin为0 拖拽的代码就不用考虑margin了
+        item.style.position="absolute";
+        item.style.left=disOff[index].left+"px";
+        item.style.top=disOff[index].top+"px";
+        item.style.margin=0;
+
+        drag(item);
+      })
+
+      //基本拖拽
+      function drag(node) {
+        var startClient={x:0,y:0};
+        var endClient={x:0,y:0};
+        var nodeDis={x:0,y:0};
+        var kNode=[];//碰撞的元素节点
+
+        node.onmousedown=function (ev) {
+          ev=ev||event;
+
+          startClient.x=ev.clientX;
+          startClient.y=ev.clientY;
+          nodeDis.x=node.offsetLeft; //踩的坑-------  记住在包含块里 不一定是body或视口
+          nodeDis.y=node.offsetTop;
+
+          document.onmousemove=function (ev) {
+            zIndexr++; //把这个变量设置为全局 这样每次变得都是那一个值
+            node.style.zIndex=zIndexr;
+
+            ev=ev||event;
+            endClient.x=ev.clientX;
+            endClient.y=ev.clientY;
+
+            var L=nodeDis.x+(endClient.x-startClient.x);
+            var T=nodeDis.y+(endClient.y-startClient.y);
+            node.style.left=L+"px";
+            node.style.top=T+"px";
+
+            //判断是否碰撞
+            kNode.length=0;
+            imgNodes.forEach(function (item) {
+              if(kocked(node,item)&&item!==node){//撞到了 仍数组
+                kNode.push(item);
+              }
+            })
+            //碰撞之前所有元素的boder清除
+            imgNodes.forEach(function (item) {
+              item.style.border="";
+            })
+            /*//碰撞之后碰撞的元素改边框
+            kNode.forEach(function (item) {
+              item.style.border="3px solid yellow";
+            })*/
+            //碰撞后最近的元素边框变颜色
+
+            var nearNodea = nearNode(node,kNode);
+            nearNodea? nearNodea.style.border="3px solid yellow":""; //判断 是否有附件节点
+
+
+          }
+
+          document.onmouseup=function (ev) {//踩的坑 ------别忘了 松开鼠标是你鼠标移动完后的事情
+            ev=ev||event;
+            document.onmouseup=document.onmousemove=null;
+          }
+
+          ev.preventDefault();
+        }
+
+      }
+      //两个元素是否碰撞 返回布尔值
+      function kocked(dragNode,checkedNode) {
+        var L2=dragNode.getBoundingClientRect().left;
+        var R2=dragNode.getBoundingClientRect().right;
+        var T2=dragNode.getBoundingClientRect().top;
+        var B2=dragNode.getBoundingClientRect().bottom;
+
+        var L1=checkedNode.getBoundingClientRect().left;
+        var R1=checkedNode.getBoundingClientRect().right;
+        var T1=checkedNode.getBoundingClientRect().top;
+        var B1=checkedNode.getBoundingClientRect().bottom;
+        if(!( B2<T1||T2>B1||R2<L1||L2>R1)){
+          //碰撞了
+          return true;
+        }else{
+          return false;
+        }
+      }
+      //两个元素的左上角之间的距离
+      function disPic(node1,node2) {
+        var a=node1.getBoundingClientRect().left-node2.getBoundingClientRect().left;
+        var b=node1.getBoundingClientRect().top-node2.getBoundingClientRect().top;
+        var c=Math.sqrt(a*a+b*b);
+        return c;
+      }
+      //拿到最近的元素
+      function nearNode(node,arrNode) {
+        if(arrNode.length === 0){ //如果相交节点是空的 结束函数
+          return ;
+        }
+        var nearNodea=null;
+        var arr=[];
+        arrNode.forEach(function (item) {
+          var c=disPic(node,item);
+           arr.push({
+             c:c,
+             node:item
+           })
+        })
+        var firstDis=arr[0].c;
+        nearNodea=arr[0].node;
+        arr.forEach(function (item) {
+          if(item.c<firstDis){
+            firstDis=item.c;
+            nearNodea=item.node
+          }
+        })
+        return nearNodea;
+      }
+
+
+    }
+    imgChange();
+
+
+
+
+
+
+
+
+  }
+</script>
+</html>
+

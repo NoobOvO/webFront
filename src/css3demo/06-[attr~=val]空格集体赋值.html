@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>(CSS3选择器)一般给class用</title>
+  <style>
+    div[class~=app]{
+      border: 1px solid red;
+    }
+
+  </style>
+</head>
+<body>
+<div class="app app1 app2">
+  app app1 app2
+
+</div>
+
+</body>
+<script>
+  //凡是带有app的属性都会被赋值(app app1 app2) 赋值一般为不可继承属性
+</script>
+</html>

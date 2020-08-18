@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列布局</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      height: 100px;
+    }
+    #wrap1{
+      background-color: red;
+      width: 100px;
+      float: left;
+    }
+    #wrap2{
+        background-color: #4386F7;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<div id="wrap1"></div>
+<div id="wrap2"></div>
+</body>
+<script>
+//让wrap1块元素opacity: 0   真正的两列元素一定要干净   两个元素各有BFC 一个浮动 一个hidden  wrap2自适应
+
+</script>
+</html>

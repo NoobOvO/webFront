@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="wrap">
+  <div class="one1">inner1</div>
+  <div class="one2">inner2</div>
+
+</div>
+</body>
+<script>
+  window.onload=function () {
+    var wrapNode=document.getElementById("wrap");
+    var one1Node=document.querySelector("#wrap .one1"); //节点
+    var one2Node=document.querySelector("#wrap .one2");
+    var cc=document.getElementsByClassName("one1"); //伪数组
+    console.log(one1Node)
+    console.log(cc)
+    console.log(one1Node === cc) //false
+    console.log(wrapNode) //节点
+
+
+    function rrrr(oneNode,twoNode) {
+      var vp1=oneNode.parentNode;
+      var vp2=twoNode.parentNode;
+      if(vp1 && vp2){
+        var cloneNode2= twoNode.cloneNode(true);//克隆的
+        vp1.replaceChild(cloneNode2,oneNode);
+
+        vp2.replaceChild(oneNode,twoNode);
+
+      }
+    }
+   rrrr(one1Node,one2Node)
+
+
+
+  }
+
+
+
+</script>
+</html>

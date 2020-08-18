@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+  <link  rel="stylesheet" href="css/tab.css"    />
+  <style>
+
+  </style>
+</head>
+<body>
+
+<div id="wrap">
+  <div id="app">
+    <input type="button" value="content1" style="background-color: #4386F7"/>
+    <input type="button" value="content2"/>
+    <input type="button" value="content3"/>
+
+  </div>
+  <div id="content">
+    <div class="content1">content1</div>
+    <div class="content2" style="display: none">content2</div>
+    <div class="content3" style="display: none">content3</div>
+  </div>
+
+</div>
+
+
+
+
+
+</body>
+<script>
+  window.onload=function () {
+    var contents=document.querySelectorAll("#wrap #content>div");
+    var buttons=document.querySelectorAll("#wrap #app input");
+    for (var i = 0; i < buttons.length; i++) {
+      (function (i) {
+        buttons[i].onclick=function () {
+          //让按钮颜色重置
+          for(var j = 0; j < buttons.length; j++){
+            buttons[j].style.backgroundColor="";
+          }
+          buttons[i].style.backgroundColor="#4386F7";
+          //让content的内容切换
+          for (var j = 0; j < contents.length; j++) {
+            contents[j].style.display="none";
+          }
+          contents[i].style.display="block";
+        }
+
+
+      })(i)
+    }
+
+
+  }
+
+
+</script>
+</html>

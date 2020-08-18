@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类</title>
+  <style>
+    .a1{
+      font-size: 40px;
+    }
+    .a1:link{
+      color: #b3d4fc;
+    }
+    .a1:visited{
+      color: green;
+    }
+    .a1:hover{
+      color: #EC4137;
+    }
+    .a1:active{
+      color: antiquewhite;
+    }
+    /*
+    伪类选择器的权重都是10
+    顺序不要换,因为CSS的层叠性,顺序不一样,会把上面的伪类选择器替换掉,效果会呈现违背需求的结果
+     */
+  </style>
+</head>
+<body>
+       <a href="##" class="a1">您好</a>
+</body>
+</html>

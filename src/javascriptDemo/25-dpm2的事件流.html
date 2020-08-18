@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    #wrap{
+      background-color: lime;
+      width: 500px;
+      height: 500px;
+    }
+    #app{
+      background-color: red;
+      width: 400px;
+      height: 400px;
+    }
+    #hh{
+      background-color: yellow;
+      width: 300px;
+      height: 300px;
+    }
+    #cs{
+      background-color: salmon;
+      width: 200px;
+      height: 200px;
+    }
+    #co{
+      background-color:  teal;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+<div id="wrap">
+  wrap
+  <div id="app">
+    app
+    <div id="hh">
+      hh
+      <div id="cs">
+        cs
+        <div id="co">
+          co
+
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+</body>
+<script>
+  window.onload=function () {
+    //谷歌浏览器 的测试功能 直接用ID属性发动事件 测试用哦  开发用 打死你
+    //你点击嵌套最里面的标签  事件会进行传播 事件效果扩散到最外面(相同事件)
+
+    //DOM2有  事件流的三部分 捕获--目标处理--冒泡
+    //false为冒泡 true为捕获 最后两个是目标处理 按顺序执行
+    wrap.addEventListener("click",function () {
+      console.log("wrap--false")
+    },false)
+    wrap.addEventListener("click",function () {
+      console.log("wrap--true")
+    },true)
+
+
+    app.addEventListener("click",function () {
+      console.log("app--false")
+    },false)
+    app.addEventListener("click",function () {
+      console.log("app--true")
+    },true)
+    hh.addEventListener("click",function () {
+      console.log("hh--false")
+    },false)
+    hh.addEventListener("click",function () {
+      console.log("hh--true")
+    },true)
+    cs.addEventListener("click",function () {
+      console.log("cs--false")
+    },false)
+    cs.addEventListener("click",function () {
+      console.log("cs--true")
+    },true)
+
+    //最后两个为目标处理
+    co.addEventListener("click",function () {
+      console.log("co--false")
+    },false)
+    co.addEventListener("click",function () {
+      console.log("co--true")
+    },true)
+
+
+  }
+</script>
+
+
+
+</html>

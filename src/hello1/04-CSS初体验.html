@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS</title>
+  <style>
+    h1{
+      color: #0000ff;
+      text-align: center;
+    }
+    p{
+      font-family: '宋体';
+      font-size: 20px;
+      text-indent: 2em;
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+<h1>javascript常见题目</h1>
+<p>一、您对js的原型是如何理解的？您对js的继承是如何理解的？能否举例说明js的继承？</p>
+
+<p>关于这个题目，我之前的一篇文章 http://www.haorooms.com/post/js_constructor_pro ，您可以看一下。理解一下原型prototype，关于继承，那主要是js原型链的继承。关于继承的理解及举例（我这里就不详细介绍了，简单介绍之后，你即使背过了，也不一定理解，对于公司也是不公平的）。我还是推荐面试者看一本书《[JavaScript高级程序设计(第3版)]》，这本书对js讲的很详细。关于这个题目，您可以阅读其第六章就可以了！认真阅读之后，相信你能理解，也能够简单的说出来！
+
+  关于js的继承，确实是重点和难点，我写过两篇博客，大家可以看下：http://www.haorooms.com/post/js_lei_jicheng
+
+  http://www.haorooms.com/post/js_jc_lei2</p>
+
+<p>二、js闭包？举例并说明其主要的作用！</p>
+
+<p>关于闭包，其实是指有权访问另一个函数作用域中变量的函数。具体我之前也写过一篇文章，可以看一看！
+
+  javascript闭包的理解 http://www.haorooms.com/post/js_bb
+
+  javascript闭包入门理解（二）：http://www.haorooms.com/post/js_bbtwo</p>
+
+<p>三、js数组主要有哪些方法？主要参数你了解吗？</p>
+
+<p>具体你可以查一下，常用的一般有如下：
+
+  1 、shift():删除数组的第一个元素,返回删除的值。这里是0
+
+  2 、unshift(3,4):把参数加载数组的前面，返回数组的长度。现在list:中是3,4,0,1,2
+
+  3、pop():删除数组的最后一个元素，返回删除的值。这里是2.
+
+  4、push(3):将参数加载到数组的最后，返回数组的长度，现在List中时：0,1,2,3
+
+  5、concat(3,4):把两个数组拼接起来。
+
+  6、splice(start,deleteCount,val1,val2,...)：从start位置开始删除deleteCount项，并从该位置起插入val1,val2,...
+
+  7、reverse：将数组反序
+
+  var a = [1,2,3,4,5];
+  var b = a.reverse(); //a：[5,4,3,2,1] b：[5,4,3,2,1]
+  8、sort(orderfunction)：按指定的参数对数组进行排序 var a = [1,2,3,4,5]; var b = a.sort(); //a：[1,2,3,4,5] b：[1,2,3,4,5]
+
+  9、slice(start,end)：返回从原数组中指定开始下标到结束下标之间的项组成的新数组
+
+  var a = [1,2,3,4,5];
+  var b = a.slice(2,5); //a：[1,2,3,4,5] b：[3,4,5]</p>
+<p>四、js迭代的方法</p>
+
+<p>every() 、fliter()、forEach()、map()、some()具体大家可以查一下！</p>
+
+<p>五、js数组去重和排序</p>
+
+<p>具体我就不详细描述了。</p>
+
+<p>六、js正则表达式</p>
+
+<p>关于正则：http://www.haorooms.com/post/js_regex_refuse ，这篇文章应对面试足够了！
+
+  让你写个简单的正则，去掉字符串左右空格。具体看看我之前的文章http://www.haorooms.com/post/js_kong_ge
+
+  关于正则，你可以去了解一下！</p>
+
+<p>七、纯js的ajax请求原理</p>
+
+<p>可以查询，了解一下！看下这几篇文章http://www.haorooms.com/post/js_ajax_chun 和http://www.haorooms.com/post/js_shixian_jquery 最后关于js实现ajax的，最新出了js的fetch方法，很不错的！</p>
+
+<p>八、js模块化</p>
+
+<p>可以看下我之前的文章：http://www.haorooms.com/post/js_require_zz</p>
+
+<p>九、双等号隐性转换</p>
+
+<p>具体看文章：http://www.haorooms.com/post/js_yinxingleixing</p>
+
+<p>十、js操作符，字符串截取等</p>
+
+<p>具体请看：http://www.haorooms.com/post/js_czf_mst</p>
+
+<p>字符串截取，substr 、substring等的区别</p>
+
+<p>十一、js中继承中call和apply（）的区别</p>
+
+<p>用法差不多，传递参数不同。具体你可以网上查查，也可以看下我的文章 http://www.haorooms.com/post/js_constructor_pro</p>
+
+<p>十二、类数组转换为数组的方法</p>
+
+<p>Array.prototype.slice.call(arguments);</p>
+<p>十三、cookie 不设置过期时间，默认过期时间是多少？</p>
+
+<p>关闭浏览器就结束了</p>
+
+<p>十四、改变数组长度的方法有哪些？</p>
+
+<p>shift、unshift、pop、push</p>
+
+<p>十五、js事件循环 event loop</p>
+
+<p>请看文章：http://www.haorooms.com/post/js_xiancheng</p>
+
+<p>十六、require 和 import的区别</p>
+
+<p>看文章：http://blog.csdn.net/qq_28702545/article/details/54892562</p>
+
+
+
+
+
+
+
+</body>
+</html>

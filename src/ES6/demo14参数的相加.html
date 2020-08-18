@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+// ...numbers  可以代替以前的 arguments  这叫剩余参数
+  function sum(...numbers) {
+    return numbers.reduce((prev,current)=>prev+current,0);
+  }
+
+  console.log(sum(1,2,3,4));
+  console.log(sum(1,2,3));
+
+
+
+</script>
+</html>

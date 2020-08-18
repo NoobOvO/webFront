@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组去重</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  var arr=[1,2,3,4,1,"haha",2,1,55,22,3,2]
+  var arrq=7;
+  function unique(arr) {
+    if(!Array.isArray(arr)){
+      console.log("????????");
+      return;
+    }
+    var array=[];
+    for (var i=0;i<arr.length;i++){
+      if(array.indexOf(arr[i])===-1){  //该值不存在
+        array.push(arr[i]);
+      }
+
+    }
+    return array;
+  }
+  console.log(unique(arrq));
+
+
+</script>
+</html>

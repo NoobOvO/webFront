@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lamp</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html,body{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #app{
+      position: relative;
+      left: 50%;
+      top: 50%;
+      margin-top: -100px;
+      margin-left: -15px;
+      width: 30px;
+      height: 200px;
+      overflow: hidden;
+      box-shadow: orange 1px 1px 10px;
+
+    }
+    #app #lamp{
+      width: 30px;
+      height: 1200px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: repeating-linear-gradient(135deg,black 0px,black 10px ,white  20px,white 30px);
+      animation: move 7s linear infinite;
+
+
+    }
+    #app:hover #lamp{
+      animation: move 6s linear infinite;
+    }
+    @keyframes move{
+      from{
+        top:0;
+      }
+      to{
+        top:-1000px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+<div id="lamp">
+
+</div>
+
+</div>
+
+</body>
+</html>

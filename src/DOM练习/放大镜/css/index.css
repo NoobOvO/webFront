@@ -1,0 +1,57 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.clearfix{
+  zoom: 1;
+}
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrap{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+}
+#wrap #small-wrap{
+  background-color: deeppink;
+  position: absolute;
+  left: 300px;
+  top: 100px;
+}
+#wrap #small-wrap .small-pic{
+   float: left;
+  border: 4px #ccc solid;
+}
+#wrap #small-wrap  .small-brick{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 75px;
+  height: 100px;
+  background-color: #ccc;
+  background: rgba(204,204,204,.5);
+  border: 1px solid rgba(255,255,255,.5);
+  display: none;
+  border-radius: 50%;
+}
+#wrap #big-wrap{
+  background-color: deeppink;
+  position: absolute;
+  left: 620px;
+  top: 100px;
+  overflow: hidden;
+  display: none;
+  border-radius: 50%;
+}
+#wrap #big-wrap .big-pic{
+  position: absolute;
+  left: 0;
+  top: 0;
+
+
+}

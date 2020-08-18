@@ -1,0 +1,59 @@
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+  margin: 0;
+  padding: 0
+}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+address,cite,dfn,em,var{font-style:normal}
+ol,ul{list-style:none}
+img{display: block}
+/*
+outline：轮廓线
+ */
+button,input,select,textarea{font-size:100%;outline: none}
+/*
+第一个是去掉表格之间的格子;第二个是将2px边框大小变为1px
+ */
+table{
+  border-collapse:collapse;
+  border-spacing:0}
+em,i{font-style: normal}
+i,del,s{
+  font-style: normal;
+  text-decoration: none;
+}
+body{
+  font-size: 12px;
+  background-color: #f4f4f4;
+}
+body a{
+  text-decoration: none;
+  color: #999999;
+}
+.clearfix{
+  zoom:1;
+}
+.clearfix:after{
+  clear:both;
+  height: 0;
+  content: '.';
+  display: block;
+  visibility: hidden;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/iconfont.woff2') format('woff2'),
+  url('../font/iconfont.woff') format('woff'),
+  url('../font/iconfont.ttf') format('truetype'),
+  url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+

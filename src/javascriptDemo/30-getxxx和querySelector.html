@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <li><span>飞科</span> <a href="javascript:;">删除</a></li>
+    <li><span>李哥</span> <a href="javascript:;">删除</a></li>
+    <li><span>李总</span> <a href="javascript:;">删除</a></li>
+    <li><span>路飞</span> <a href="javascript:;">删除</a></li>
+    <li><span>顺丰</span> <a href="javascript:;">删除</a></li>
+    <li><span>乐亭</span> <a href="javascript:;">删除</a></li>
+    <li><span>老听</span> <a href="javascript:;">删除</a></li>
+    <li><span>谷歌</span> <a href="javascript:;">删除</a></li>
+  </ul>
+</div>
+
+</body>
+<script>
+  window.onload=function () {
+    /*var liNode=document.querySelectorAll("li")
+    var node1=document.querySelector("ul");
+    node1.innerHTML+='<li>'+'<span>谷歌</span> <a href="javascript:;">删除</a></li>';
+    liNode=document.querySelectorAll("li");
+
+    for (var i = 0; i < liNode.length; i++) {
+      liNode[i].style.backgroundColor='green';
+    }*/
+  /*  var liNode=document.querySelectorAll("li")*/
+    var liNode=document.getElementsByTagName('li')
+    var ulNode=document.querySelector("ul")
+    ulNode.innerHTML+='<li><span>谷歌8</span> <a href="javascript:;">删除</a></li>'
+    /*liNode=document.querySelectorAll("li")*/
+    for(var i=0;i<liNode.length;i++){
+      liNode[i].style.backgroundColor='green'
+    }
+
+
+  }
+
+</script>
+</html>

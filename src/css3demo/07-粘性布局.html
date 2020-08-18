@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name ="viewport" content ="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <title>粘性布局(footer一直会在最下面)</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    html,body{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #wrap{
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+    #wrap #main{
+      width: 100%;
+      min-height: 100%;  /*内容多了 footer会消失*/
+      background-color: #4386F7;
+      text-align: center;
+
+    }
+    #wrap #main #content{
+      padding-bottom: 50px; /*注意点*/
+
+
+    }
+
+    #wrap #footer{
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      background-color: lime;
+      margin-top: -50px; /* 注意点*/
+
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+     <div id="main">
+       <div id="content">
+       <!--  main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+         main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+         main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+         main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+         main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+         main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+         main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+         main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+         main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>-->
+
+
+       </div>
+
+
+     </div>
+    <div id="footer">footer</div>
+  </div>
+</body>
+</html>

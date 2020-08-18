@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伸缩</title>
+  <style>
+    #app{
+      width:100%;
+      height: 300px;
+      background-color: #4386F7;
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+
+</div>
+</body>
+<script>
+  var app=document.querySelector("#app");
+  app.onmousewheel=fn;
+
+  //下面这个是火狐浏览器的,因为不兼容mousewheel
+  app.addEventListener("DOMMouseScroll",fn
+  )
+  function fn(ev) {
+    var dir='';
+    if(ev.detail){//火狐
+   ev.detail>0 ? dir= 'down': dir= 'up'
+    }else if(ev.wheelDelta){//其它浏览器
+      ev.wheelDelta>0 ?  dir= 'down': dir= 'up'
+    }
+    switch (dir) {
+      case 'down':
+        app.style.height=( app.offsetHeight+ 10)+'px';
+        break;
+      case 'up':
+        app.style.height=( app.offsetHeight- 10)+'px';
+        break;
+    }
+   ev.preventDefault(); //阻止默认事件 就是body 高度太大后 默认触发滚轮向上的事件 覆盖掉了高度的伸缩事件
+
+  }
+
+
+</script>
+</html>

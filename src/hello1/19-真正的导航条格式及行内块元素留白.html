@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMGGG</title>
+  <style>
+    /*
+    a标签浮动后,获得长和宽的距离,但是,你要在a标签设置display:block不然不起作用
+    让a标签有长和宽有两种方法,一种是block，另一种是inline-block，但是inline-block会有默认留白,留个2px左右的留白,比如img就有,因为他们是行内元素,想清除留白还是要设置为block块元素
+    seo搜索引擎优化会认为堆砌的a标签是作弊行为,所以导航条一般设置为ul li 来套a标签
+    因为浮动问题,下面的块元素会顶上,所以要在浮动元素的父元素设置个属性 clearfix:after 或者 overflow:hidden来解决此问题
+    设置行内元素会有留白,建议设置为块元素
+     */
+    *{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .box .sailiya ul li{
+      background-color: red;
+      text-align: center;
+    }
+    a{
+      color: lime;
+      text-decoration: none;
+      display: block;
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+
+
+    }
+    .box .sailiya ul li:hover{
+      background-color: lime;
+    }
+    .box .sailiya ul li a:hover{
+      color: white;
+      text-decoration: underline;
+    }
+
+    li{
+      float: left;
+      margin-left: 5px;
+    }
+
+    .sailiya{
+      width: 800px;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+    .yyll{
+      height: 300px;
+      background-color: yellow;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="sailiya">
+    <ul>
+      <li>
+        <a href="##">导航</a>
+      </li>
+      <li>
+        <a href="##">导航</a>
+      </li>
+      <li>
+        <a href="##">导航</a>
+      </li>
+      <li>
+        <a href="##">导航</a>
+      </li>
+      <li>
+        <a href="##">导航</a>
+      </li>
+      <li>
+        <a href="##">导航</a>
+      </li>
+    </ul>
+  </div>
+  <div class="yyll">
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

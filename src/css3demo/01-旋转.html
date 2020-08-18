@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变形(旋转)</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      position: absolute;
+    }
+    #wrap{
+      width: 500px;
+      height: 500px;
+      background-color: #4386F7;
+    }
+    #inner{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: yellow;
+      text-align: center;
+      line-height: 200px;
+      transition: 2s;
+    }
+    #inner:hover {
+      transform: rotate(-360deg);
+    }
+
+  </style>
+</head>
+<body>
+<div id="wrap" >
+  <div id="inner">
+      哈喽沃德
+  </div>
+</div>
+</body>
+</html>

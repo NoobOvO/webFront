@@ -1,0 +1,41 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#wrap{
+  overflow: auto;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  left: 0;
+  top:150px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid;
+
+
+
+}
+#wrap #app{
+  height: 40px;
+  border-bottom: 1px solid;
+  text-align: center;
+
+
+
+
+}
+#wrap #content{
+position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ text-align: center;
+  background-color: red;
+
+
+
+}

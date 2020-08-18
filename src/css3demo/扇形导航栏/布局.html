@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #app{
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      width: 68px;
+      height: 68px;
+
+
+    }
+    #app .btns{
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+
+    }
+    #app .btns img{
+      width: 51px;
+      height: 51px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 9px;
+    }
+    #app .home{
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 50%;
+      background: url("img/d1.png") no-repeat -7px;
+
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="btns">
+    <img src="img/z1.png">
+    <img src="img/z2.png">
+    <img src="img/z3.png">
+    <img src="img/z4.png">
+    <img src="img/z5.png">
+  </div>
+  <div class="home">
+  </div>
+</div>
+
+</body>
+</html>

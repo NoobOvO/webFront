@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  //对target进行保护 预处理
+  const person={name:"lzj",age:18};
+  //第一个参数为target 第二个参数为handler
+  const proxyTool=new Proxy(person,{
+    get(target,key) {
+      return target[key].toLocaleUpperCase();
+    },
+    set(target,key,value) {
+      if(typeof value === "string"){
+        target[key]=value.trim();
+      }
+    }
+
+  });
+
+  proxyTool.name="未来战士";
+
+
+
+
+</script>
+</html>

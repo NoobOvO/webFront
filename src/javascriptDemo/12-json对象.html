@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  //JSON对象的遍历方式 和数组的遍历不一样 数组是有序的 直接for i就可以了
+  var json01={name:'lihao',gender:'man',age:18};
+  //对象遍历要用for in的形式
+  for(var  k in json01){  //value用中括号的形式 .的形式相当于给个属性,js不能识别只能给个undefined
+    //console.log(json01.k)   undefined  js不会报错 但没有这个属性
+    //k为属性名
+    console.log(json01[k])//这样遍历json对象 无序集合
+  }
+
+
+
+</script>
+</html>

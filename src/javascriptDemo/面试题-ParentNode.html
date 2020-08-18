@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PD</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <li><span>飞科</span> <a href="javascript:;">删除</a></li>
+    <li><span>李哥</span> <a href="javascript:;">删除</a></li>
+    <li><span>李总</span> <a href="javascript:;">删除</a></li>
+    <li><span>路飞</span> <a href="javascript:;">删除</a></li>
+    <li><span>顺丰</span> <a href="javascript:;">删除</a></li>
+    <li><span>乐亭</span> <a href="javascript:;">删除</a></li>
+    <li><span>老听</span> <a href="javascript:;">删除</a></li>
+    <li><span>谷歌</span> <a href="javascript:;">删除</a></li>
+  </ul>
+</div>
+
+
+</body>
+<script>
+ /* 循环的注册事件很有可能用到闭包*/
+window.onload=function () {
+  /*var liNode=document.getElementsByTagName("li");
+  var newArray=Array.prototype.slice.call(liNode)
+   newArray.forEach(function (item,index) {
+       item.lastChild.onclick=function () {
+         item.remove()
+       }
+   })*/
+  //闭包
+/* var aNode= document.querySelectorAll("a");
+ for(var i=0;i<aNode.length;i++){
+   (function (i) {
+     aNode[i].onclick=function () {
+       aNode[i].parentNode.remove()
+     }
+   })(i)
+ }*/
+//事件委托
+  var ulNode=document.querySelector("ul");
+  ulNode.onclick=function (ev) {
+    if(ev.target.nodeName.toLocaleUpperCase() == "A"){
+      ev.target.parentNode.remove()
+    }
+  }
+
+
+
+
+
+}
+
+</script>
+</html>

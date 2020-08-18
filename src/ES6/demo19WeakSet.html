@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WS</title>
+</head>
+<body>
+<p>数组成员只能是对象,不能是基本数据类型</p>
+<p>不能用 for of循环遍历</p>
+<p>foreach循环也没有</p>
+<p>作用主要是自动清除</p>
+</body>
+<script>
+
+  let p1 = {name:"duck",age:18};
+  let p2 = {name:"faker",age:30};
+
+  const vk=new WeakSet([p1,p2]);
+  console.log(vk);
+  p1 = null; //清除 不会引起内存的泄露
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let subClass = function(){
+    let name='程新松';
+    if(true){
+      var name='saucxs';
+      console.log(name);
+    }
+    console.log(name);
+  }
+  subClass();  // Uncaught SyntaxError: Identifier 'name' has already been declared let不可以重复声明 var也不好使
+</script>
+</html>

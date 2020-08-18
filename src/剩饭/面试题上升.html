@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SS</title>
+</head>
+<body>
+
+</body>
+<script>
+  function getName() {
+    alert(5);
+  }
+  function foo() {
+    getName=function () {
+      alert(1);
+    }
+    return this;
+  }
+   foo.getName=function () {
+     alert(2);
+   }
+  foo.prototype.getName=function () {
+    alert(3);
+  }
+   getName=function () {
+     alert(4);
+   }
+     foo.getName();//2
+     getName();//4
+    foo().getName();//1
+  getName();//1
+  new foo.getName();//2
+  new foo().getName();//3  ()和.调用顺序是平级的
+
+
+</script>
+</html>

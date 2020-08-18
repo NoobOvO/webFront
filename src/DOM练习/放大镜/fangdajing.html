@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <style>
+
+
+  </style>
+</head>
+<body>
+
+<div id="wrap">
+  <div id="small-wrap">
+  <img class="small-pic clearfix" src="img/com111.jpg" >
+    <!--小框-->
+   <i class="small-brick"></i>
+  </div>
+  <div id="big-wrap">
+    <img class="big-pic clearfix" src="img/com1111.jpg" >
+
+  </div>
+</div>
+</body>
+<script>
+window.onload=function () {
+
+  document.onmousedown=function (ev) {
+    ev=ev||event;
+    ev.preventDefault();
+  }
+
+
+
+
+  var brick=document.querySelector("#wrap #small-wrap .small-brick");//小区域
+  var  smallPic= document.querySelector("#wrap #small-wrap .small-pic");//小图片
+  var smallWrap=document.querySelector("#wrap #small-wrap");//小的整体区域
+  var bigWrap=document.querySelector("#wrap #big-wrap");//小的整体区域
+  var bigPic=document.querySelector("#wrap #big-wrap .big-pic");
+
+  bigWrap.style.width=parseInt(window.getComputedStyle(smallWrap).width)+"px";
+  bigWrap.style.height=parseInt(window.getComputedStyle(smallWrap).height)+"px";
+
+  smallWrap.onmouseenter=function(){
+    brick.style.display="block";
+    bigWrap.style.display="block"
+  }
+  smallWrap.onmouseleave=function(){
+    brick.style.display="none";
+    bigWrap.style.display="none"
+  }
+
+  smallWrap.onmousemove=function (ev) {
+   ev=ev||event;
+
+
+   var L=ev.clientX-this.getBoundingClientRect().left-parseInt(window.getComputedStyle(this).borderLeftWidth);//小砖头距离小图片的左距离
+   var T=ev.clientY-this.getBoundingClientRect().top-parseInt(window.getComputedStyle(this).borderTopWidth);//小砖头距离小图片的上距离
+    L= L-brick.offsetWidth/2;
+    T= T-brick.offsetHeight/2;
+
+    var maxL=smallWrap.clientWidth-brick.offsetWidth;
+    var maxT=smallWrap.clientHeight-brick.offsetHeight;
+
+
+   /* 取值范围*/
+    L= L<0?0:L;
+    T=T<0?0:T;
+    L=L>maxL?0:L;
+    T=T>maxT?0:T;
+
+   /*改值*/
+    brick.style.left=L+"px";
+    brick.style.top=T+"px";
+
+
+    //放大镜
+    //块移动的距离/移动的最大距离=大块移动的距离/大块移动的最大距离
+    var flagL=L/maxL;
+    var flagT=T/maxT;
+    var maxLforBigWidth=bigPic.offsetWidth-bigWrap.clientWidth;
+    var maxHforBigHeight=bigPic.offsetHeight-bigWrap.clientHeight;
+    bigPic.style.left= -maxLforBigWidth*flagL + "px";
+    bigPic.style.top= -maxHforBigHeight*flagT + "px";
+
+  }
+
+
+
+
+
+
+}
+
+</script>
+</html>

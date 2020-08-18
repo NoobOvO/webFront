@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      width: 150px;
+      height: 250px;
+      background-color: #4386F7;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+
+
+    }
+  </style>
+</head>
+<body>
+<div id="wrap">
+
+
+
+</div>
+
+
+
+</body>
+<script>
+  window.onload=function () {
+    document.oncontextmenu=function (ev) {
+         var  wrapNode= document.querySelector("#wrap");
+         //预定义属性可以拿来用
+         console.log(wrapNode.style)
+         wrapNode.style.display="block"
+         wrapNode.style.left=ev.clientX+"px";
+         wrapNode.style.top=ev.clientY+"px"
+//让右键菜单失效
+      ev.preventDefault()
+
+    }
+
+    document.onclick=function (ev) {
+      ev=ev||event
+      var  wrapNode= document.querySelector("#wrap");
+      wrapNode.style.display="none";
+
+    }
+
+
+
+
+  }
+
+
+
+
+
+</script>
+</html>

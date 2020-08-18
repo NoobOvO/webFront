@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name ="viewport" content ="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <title>粘性布局</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    html,body{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    #wrap{
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+    }
+    #wrap #main{
+      background-color: #b3d4fc;
+      text-align: center;
+      min-height: 100%;
+      padding-bottom: 50px;  /*注意点*/
+      box-sizing: border-box;  /*注意点  但这样会破坏盒子的整体结构,不推荐,那你就在main盒子里在套个盒子,小盒子内边距往里推50px*/
+    }
+    #wrap #footer{
+      background-color: #990055;
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      width: 100%;
+      margin-top: -50px;  /*注意点*/
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div id="main">
+    <!--main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+    main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+    main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+    main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>
+    main<br>main<br>main<br>main<br>main<br>main<br>main<br>main<br>-->
+
+
+  </div>
+  <div id="footer">footer</div>
+</div>
+</body>
+</html>

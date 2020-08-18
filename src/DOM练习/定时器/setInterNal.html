@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Okko</title>
+</head>
+<body>
+
+</body>
+<script>
+  window.onload=function () {
+  //循环定时器  默认无限循环
+   var timer= window.setInterval(function (a,b,c) {
+      console.log(a,b,c)
+    },1000,"otto","okko","faker")
+
+    window.setTimeout(function () {
+      window.clearInterval(timer)
+    },5000)
+
+
+  }
+
+
+
+</script>
+</html>

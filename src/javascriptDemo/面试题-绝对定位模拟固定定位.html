@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位模拟固定定位</title>
+  <style>
+ *{
+   margin: 0;
+   padding: 0;
+ }
+ html{
+   overflow: hidden;
+  height: 100%;
+  width: 100%;
+ }
+
+ body{
+   overflow: auto;
+   height: 100%;
+   width: 100%;
+ }
+    #app{
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      position: absolute;
+      left: 50px;
+      top: 50px;
+    }
+  </style>
+</head>
+<body>
+<!--在滚动条滚动时,不让初始包含快随者滚动条滚动,就可以实现绝对定位代替固定定位-->
+<!--系统滚动条滚动时,初始包含快一定会随之滚动,视口不会-->
+<!--只要有内容溢出视口就会出现系统滚动条-->
+<!--当只有html有overflow属性,overflow属性作用于系统
+当只有body有overflow属性,overflow属性作用于系统
+当html和body都有overflow属性时
+html作用于系统,body作用于自己-->
+<!--这两组合用,系统滚动条被隐藏,用body自身的滚动条 前者会随着视口变化内容变化-->
+<!--想方法把body给撑开,然后让body的高宽和视口一样大-->
+<!--将html和body的高度定死,这样就会被里面的内容撑开  再加上html和body同时使用overflow时 body是作用于自身的 html那个给隐藏-->
+
+
+<!--这就相当于在body的滚动条下,body这个小盒子里进行操作,在这个盒子里的绝对定位就是固定定位-->
+<div style="height: 3000px"></div>
+<div id="app"></div>
+</body>
+</html>

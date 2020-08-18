@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .bfc {
+      /* 计算 BFC 高度时，包含 BFC 内所有元素，即使是浮动元素也会参与计算 */
+      /* 这一特性可以用来解决浮动元素导致的高度塌陷 */
+      /* 尝试注释掉 overflow: auto，看效果 */
+      /* 如果父元素没有创建 BFC，在计算高度时，浮动元素不会参与计算，此时就会出现高度塌陷 */
+      overflow: hidden;  /*不是visible有overflow属性 属于BFC 计算它 并把浮动的元素高度算贼内*/
+      background: gray;
+    }
+
+    .float {
+      float: left;
+      width: 100px;
+      height: 80px;
+      background: green;
+    }
+
+    .inner {
+      height: 50px;
+      background: yellow;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="bfc">
+  <div class="float"></div>
+  <div class="inner"></div>
+</div>
+
+</body>
+</html>

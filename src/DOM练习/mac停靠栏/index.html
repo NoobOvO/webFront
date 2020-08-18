@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAC</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      position: absolute;
+      width: 100%;  /*让容器撑开宽度*/
+      font-size: 0; /*清除图片之间的空隙*/
+      bottom: 0;
+      text-align: center;
+    }
+    img{
+      width: 64px;
+
+    }
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <img src="./img/1.png" >
+  <img src="./img/2.png" >
+  <img src="./img/3.png" >
+  <img src="./img/4.png" >
+  <img src="./img/5.png" >
+</div>
+</body>
+<script>
+  window.onload=function () {
+
+function mac() {
+  var imgNode= document.querySelectorAll("img");
+  var r=320;
+  document.onmousemove=function (ev) {
+
+
+    imgNode.forEach(function (item) {
+      var rtop=item.getBoundingClientRect().top+(item.offsetHeight/2)-ev.clientY;
+      var rleft=item.getBoundingClientRect().left+(item.offsetWidth/2)-ev.clientX;
+      var c=0;
+      c=Math.sqrt(rtop*rtop+rleft*rleft);
+      if(c>r){
+        c=r;
+        console.log(111)
+      }
+      item.style.width= (128- c*0.2)+"px";
+
+    })
+
+
+
+  }
+
+
+}
+
+
+mac();
+
+
+
+  }
+</script>
+</html>

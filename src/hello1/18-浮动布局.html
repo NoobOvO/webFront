@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动布局</title>
+  <style>
+    /*
+    为了解决浮动元素对下面的元素造成的影响,你可以在浮动元素套一个块元素,独占一格
+    可以把浮动元素看成一个个的小房间,把块元素看成一个个的房子,楼层是从上往下建造的
+    这就是所谓的浮动布局
+
+    清除浮动对周围元素造成的影响手段有:
+    1.给父元素设置宽高
+    2.给父元素设置overflow:hidden 副作用:溢出隐藏
+    3.给父元素设置伪类 clearfix:after
+
+    当给行内元素或者行内块元素设置浮动后,设置宽高对其有影响
+     */
+    .lala1{
+      height: 300px;
+      background-color: #b3d4fc;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box1{
+      width: 100px;
+      height: 100px;
+      background: blue;
+      float: left;
+    }
+    .box2{
+      width: 200px;
+      height: 200px;
+      background: red;
+      float: left;
+    }
+    .box3{
+      width: 300px;
+      height: 300px;
+      background: lime;
+      float: left;
+    }
+    .lala3{
+      height: 500px;
+      background: #EC4137;
+    }
+    .lala2{
+      height: 300px;
+      border: 1px #fff solid;
+    }
+
+  </style>
+</head>
+<body>
+<div class="lala1"></div>
+<div class="lala2">
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+</div>
+<div class="lala3"></div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cube</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    #wrap{
+      width: 500px;
+      height: 500px;
+      border: solid 1px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      perspective: 2000px;
+
+    }
+    #wrap #container{
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transform-style: preserve-3d;
+      transition: 3s transform linear;
+      transform-origin: center center 150px;   /*盒子重心*/
+
+    }
+    #container div{
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      margin: auto;
+      background: blueviolet;
+      line-height: 200px;
+      text-align: center;
+      border: solid 1px;
+      box-sizing: border-box;  /* 让每个正方形边框连在一起*/
+
+
+
+    }
+    #container div:nth-child(1){
+        top:-150px;
+        left: 50px;
+      transform-origin: bottom center;
+      transform: rotateX(-90deg);
+
+
+    }
+    #container div:nth-child(2){
+      top:250px;
+      left: 50px;
+      transform-origin: top center;
+      transform: rotateX(90deg);
+
+
+    }
+    #container div:nth-child(3){
+      left: -150px;
+      top: 50px;
+      transform-origin: right center;
+      transform: rotateY(90deg);
+
+
+    }
+    #container div:nth-child(4){
+      right: -150px;
+      top: 50px;
+      transform-origin: left center;
+      transform: rotateY(-90deg);
+
+    }
+    #container div:nth-child(5){
+      top: 50px;
+      left: 50px;
+      z-index: 1;
+      transform: translateZ(200px);
+
+
+
+
+    }
+    #container div:nth-child(6){
+      top: 50px;
+      left: 50px;
+
+    }
+
+    #container:hover{
+    transform: rotateY(360deg);
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="container">
+      <div>上</div>
+      <div>下</div>
+      <div>左</div>
+      <div>右</div>
+      <div>前</div>
+      <div>后</div>
+    </div>
+</div>
+
+</body>
+</html>

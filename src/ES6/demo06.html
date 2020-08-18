@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  //箭头函数可以继承父作用域
+  const Jelly={
+    name:"Jelly",
+    hobbies:["Coding","Sleeping","Reading"],
+    printHobbies:function () {
+      this.hobbies.map(hobby=>{
+        console.log(this.name+"的 hobby 是 "+hobby)
+      })
+    }
+  }
+
+
+ Jelly.printHobbies();
+
+
+
+
+
+</script>
+</html>

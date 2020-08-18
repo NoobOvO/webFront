@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="app">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+
+</body>
+
+<script>
+ var nodeList = document.getElementById("app")
+ console.log(nodeList.childNodes) //这个会把空格给算上 不会剔除文本节点
+ console.log(nodeList.children)
+  nodeList= Array.prototype.slice.call(nodeList)//伪数组转换真数组
+  nodeList.forEach(function (item) {
+
+
+  })
+
+
+</script>
+
+
+</html>

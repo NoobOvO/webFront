@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  //反转数组
+  // 0      arr.length-1-0
+  var arr01=[1,2,3,4,5,6,7,8];
+  var change=0;
+   var len= parseInt(arr01.length/2);
+  for(var i=0;i<len;i++){
+    var temp=arr01[i];
+    arr01[i]=arr01[arr01.length-1-i];
+    arr01[arr01.length-1-i]=temp;
+  }
+
+  console.log(arr01)
+</script>
+</html>

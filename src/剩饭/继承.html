@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型链继承</title>
+</head>
+<body>
+
+</body>
+<script>
+  //JS的继承靠原型链 想象那张图 把线掐断 重连即可
+  function Person(name,age) {
+       this.name=name;
+       this.age=age;
+  }
+  Person.prototype.run="I am run";
+  function Student(name,age,hobby) {
+    Person.call(this,name,age);
+    this.hobby=hobby;
+  }
+  Student.prototype.__proto__=Person.prototype;  //把原型链给改了 继承了Person的独特方法 原型链的头 也就是Object的显示原型指向null
+   var wsc=new Student("王思聪",18,"睡觉");
+  console.log(wsc.run)
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  const Jelly={
+    name:"Jelly",
+    birthday:"1997-10-10",
+    todos:[
+      {name:"Go",computed:true},
+      {name:"Running",computed:false},
+      {name:"Jump",computed:true}
+    ]
+  }
+const str=`<ul>${Jelly.todos.map( (todo) =>
+  `<li>${todo.name}---${todo.computed ? 'Yes':'No'}</li>`
+).join('')}</ul>`;
+//擦 尖括号都不能有
+document.body.innerHTML=str;
+
+
+
+
+
+
+
+</script>
+</html>

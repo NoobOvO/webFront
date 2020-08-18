@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D舞台</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      position: absolute;
+    }
+    #wrap{
+      width: 500px;
+      height: 500px;
+      background-color: #4386F7;
+
+      /*作用给子代元素*/
+      perspective: 500px;   /*这两个元素组合,是完整的3D舞台 */ /*景深*/  /*景深越大，灭点越远，元素变形越小 景深越小，灭点越小，元素变形越大*/
+      transform-style: preserve-3d; /*3D舞台*/
+    }
+    #inner{
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+      transform: rotateX(50deg) translateZ(100px); /*在3D效果里,Z轴有真值 你可以测试，曾加旋转的X轴，元素可以飞过去,也可以飞回来*/
+
+    }
+    #inner:hover {
+
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+<div id="wrap" >
+  <div id="inner">
+  </div>
+</div>
+</body>
+<script>
+
+
+
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FLEX</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html,body{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    #wrap{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    #wrap #box{
+      margin: 100px auto;
+      width: 720px;
+      height: 600px;
+      border: 1px solid;
+
+      display: flex; /*伸缩容器*/
+      /*justify-content: space-between;*/
+     /* align-items: baseline; 以基线为标准*/
+
+
+    }
+    #wrap #box .box1{
+      background-color: #b3d4fc;
+      width: 120px;
+      height: 120px;
+    }
+    #wrap #box .box2{
+      background-color: red;
+      width: 120px;
+      height: 120px;
+    }
+    #wrap #box .box3{
+      background-color: rebeccapurple;
+      width: 120px;
+      height: 120px;
+    }
+    #wrap #box .box4{
+      background-color: chartreuse;
+      width: 120px;
+      height: 120px;
+    }
+    #wrap #box .box5{
+      background-color: darkolivegreen;
+      width: 120px;
+      height: 120px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="wrap">
+       <div id="box">
+         <div class="box1">1</div>
+         <div class="box2">2</div>
+         <div class="box3">3</div>
+         <div class="box4">4</div>
+         <div class="box5" style="font-size: 50px;text-align: center">5</div>
+       </div>
+
+</div>
+</body>
+</html>

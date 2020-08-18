@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  /*var sum;
+  sum();
+  var sun=function(){
+    alert(111)
+  }*/
+/* var a;
+ console.log(a);
+
+  a='哈哈';
+ console.log(a);*/
+
+
+
+
+/*var sum=function () {
+  console.log(sum)
+}
+sum();
+sum='嘿嘿';
+console.log(sum); //函数体里面的sum找不到谁是sum,会向外找,var作用域最大,var的sum是函数体,所以,sum就是函数体*/
+
+
+
+/*  var sum=function (sum) {
+    console.log(sum)//传参了 参数默认是var var的sum是undefined 所以打印就是undefined
+  }
+  sum();
+  console.log(sum); //访问的依然是函数体*/
+
+
+/*var sum='哈哈';
+function sum() { //var 会置顶 并向上提升
+  alert("我是函数体sum")
+}
+console.log(sum)
+sum();
+  //答案
+  var sum;
+  var sum=function () {
+    alert("我是函数体sum")
+  }
+  sum='哈哈';
+  sum();*/
+
+
+
+
+/*
+var sum='哈哈';
+sum=function () {//没有var 不存在作用域置顶
+  sum='嘿嘿';
+  console.log(sum)
+}
+sum();//嘿嘿
+sum();//Not a funtion  因为 sum函数调用后sum变成了值 就不在是函数*/
+
+
+
+
+/*var sum='哈哈';
+sum=5;
+var fn=function () {
+  sum='呵呵'
+}
+  console.log(sum)//5
+fn();
+console.log(sum)//呵呵*/
+
+
+
+
+
+
+var sum='哈哈'
+  
+  function sum() {
+    sum='嘿嘿';
+    console.log(sum)
+  }
+sum();//被后面的sum给覆盖了  sum变成了值而不是函数  not a function
+
+  //过程如下
+  var sum;
+  var sum=function () {
+    sum='嘿嘿';
+    console.log(sum)
+  }
+  sum='哈哈';
+  sum();
+
+
+</script>
+</html>

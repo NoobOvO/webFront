@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BB</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #list{
+      width: 92px;
+      height: 288px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      list-style: none;
+
+    }
+    .ii{
+      height: 30px;
+      width: 90px;
+      background-color: gray;
+      border: 1px black solid;
+      text-align: center;
+      line-height: 30px;
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+<ul id="list">
+  <li class="ii">item-1</li>
+  <li class="ii">item-2</li>
+  <li class="ii">item-3</li>
+  <li class="ii">item-4</li>
+  <li class="ii">item-5</li>
+  <li class="ii">item-6</li>
+  <li class="ii">item-7</li>
+  <li class="ii">item-8</li>
+  <li class="ii">item-9</li>
+</ul>
+
+
+</body>
+<script>
+window.onload=function () {
+
+  var listNode = document.querySelectorAll("#list li");
+  /* //第一种 方法 通过this拿到文本节点的值
+  for( var  i=0;i<listNode.length;i++){
+     listNode[i].onclick=function (ev) {
+       console.log(this.textContent)
+     }
+  }*/
+
+
+  /*//第二种 闭包
+
+  for( var  i=0;i<listNode.length;i++) {
+    (function (i) {
+      listNode[i].onclick=function () {
+        console.log(listNode[i].textContent)
+      }
+    })(i)
+  }*/
+
+  /*//第三种 foreach
+   listNode = Array.prototype.slice.call(listNode)
+  listNode.forEach(function (item,index,arr) {
+    item.onclick=function(){
+      console.log(item.textContent)
+    }
+  })
+}*/
+
+
+/*//第四种 事件委托
+  //通过父亲节点的事件触发 委托给子节点执行方法
+   var liNode=document.querySelector("#list");
+  liNode.onclick = function (ev) {
+    ev = ev||event;
+    if(ev.target.nodeName.toUpperCase() == 'LI'){
+      console.log(ev.target.textContent)
+    }
+
+  }*/
+
+
+}
+</script>
+</html>

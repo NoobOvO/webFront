@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HelloWorld</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #app{
+      width: 100px;
+      height: 100px;
+      background-color: #4386F7;
+      position: absolute;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+
+  <div id="app">
+  </div>
+  <div id="wrap">
+  </div>
+
+
+
+</body>
+<script src="./js/drag.js"></script>
+<script>
+  window.onload=function () {
+    var app=document.getElementById("app");
+
+   // var wrap=document.getElementById("wrap");
+    //var area=document.getElementById("ko")
+
+/*    function fn() {
+      app.style.backgroundColor="gray";
+    }
+    function fn2() {
+      app.style.backgroundColor="#4386F7";
+    }*/
+
+
+    drag(app);
+
+
+
+
+
+  }
+
+</script>
+</html>

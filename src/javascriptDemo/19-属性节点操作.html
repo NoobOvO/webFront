@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app" class="active active2 active3 damu" name="haha"></div>
+</body>
+<script>
+  var appNode=document.querySelector("#app")
+  console.log(appNode)
+  appNode.classList.add("nihaoa")
+  appNode.classList.remove("damu")//对class的CRUD
+
+  console.log(appNode.id)
+  console.log(appNode.name)  //向通过点方式得到的值 必须是预定义的 name在div不是 而是自定义属性
+  console.log(appNode.className)//class 为保留字(为了以后JS的扩展) 于是用className来代替 获取class的值
+
+  appNode.classList.toggle("active");//切换 对class属性操作 有就删除 没有就增加  这个active就被删除了
+  console.log(appNode.className)//class 为保留字(为了以后JS的扩展) 于是用className来代替 获取class的值
+
+  var item= appNode.classList.item(0)//返回索引的值
+  console.log(item)
+
+  var bool=appNode.classList.contains("active2")
+  console.log(bool)
+
+
+
+
+
+</script>
+</html>

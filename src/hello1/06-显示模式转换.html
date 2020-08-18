@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示模式转行</title>
+    <style>
+      /*
+      display:block 将行内元素转换成块元素
+      两个行内元素的缝隙是哪里来的,答案:空格或者换行
+      <span></span><span></span>    与   <span></span> <span></span>
+      一个紧挨着 一个有空格或者幻化
+
+      inline-block:行内元素转换
+      block:块级元素转换
+
+       */
+      span{
+        background-color: #0f0;
+      }
+      div{
+        width: 200px;
+        height: 200px;
+        background: pink;
+        display: inline-block;
+      }
+    </style>
+</head>
+<body>
+   <span>我是span</span><span>我是span</span>
+   <div></div>
+   <div></div>
+
+
+
+
+
+</body>
+</html>

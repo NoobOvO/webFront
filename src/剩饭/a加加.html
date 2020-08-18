@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  var a=0;
+ //  var b=a++ + ++a + a + a++ + ++a; //0 2 2 2 4
+  var b=a++ + ++a + a + ++a + ++a; //0 2 2 3 4     a++后加 ++a先加
+  console.log(b);
+//++a 和 a++尽量不要做赋值操作 因为这样会变得复杂
+  //a=++a 首先开辟两个空间 1个a 1个a++ a为0 a++为0 因为a++的效果 a变为1 但a++又赋值给a a最后还是变为0
+
+
+
+
+</script>
+</html>

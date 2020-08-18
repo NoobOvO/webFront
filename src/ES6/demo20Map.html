@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>键值对</p>
+</body>
+<script>
+
+  const map=new Map();
+  map.set("jili1",111);
+  map.set("jili2",111);
+  map.set("jili3",111);
+  console.log(map);
+  var ca=map.has("jili1");
+ console.log(ca);
+ map.forEach(function (item,index,arr) {
+   console.log(item,index,arr); //值  键   整个数组
+ })
+
+</script>
+</html>

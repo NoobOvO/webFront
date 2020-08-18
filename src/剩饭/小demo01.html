@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  function a(name){
+    if(name){
+      this.name=name;
+    }                 //这个name有的话 进判断 没有的话 继承原型的name
+  }
+  console.log(new a().name)
+  function b(name) {
+    this.name=name;  //这个不会找原型 没有就是undefined
+  }
+  console.log(new b().name)
+  function c(name) {
+    this.name=name?name:"xiaohai";  //这个也是 没有用条件后面的
+  }
+  a.prototype.name="tom";
+  b.prototype.name="tom";
+  c.prototype.name="tom";
+
+
+  console.log(new c().name)
+
+
+
+
+
+
+
+</script>
+</html>

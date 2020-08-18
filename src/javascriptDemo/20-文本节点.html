@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div id="app">我是app
+  <div id="content">
+    我是content
+  </div>
+  </div>
+</body>
+<script>
+  var appNode=document.getElementById("app")
+  console.log(appNode.innerText)//用的少
+  console.log(appNode.textContent)//性能高
+
+  console.log(appNode.innerHTML)
+</script>
+</html>

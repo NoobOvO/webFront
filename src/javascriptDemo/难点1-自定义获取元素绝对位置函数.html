@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QQ</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+     div{
+       width: 200px;
+       height: 200px;
+       border: 10px solid;
+     }
+     #wrap{
+       left: 10px;
+       top: 10px;
+       position: absolute;
+       background: pink;
+     }
+    #inner1{
+      left: 100px;
+      top: 100px;
+      position: absolute;
+      background: hotpink;
+    }
+    #inner2{
+      background: deeppink;
+      position: fixed;
+      left: 50px;
+      top: 50px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="wrap">wrap
+  <div id="inner1">inner1
+    <div id="inner2">inner2
+
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+<script>
+  window.onload=function () {
+    var  inner1Node=document.querySelector("#inner1");
+    //元素的绝对位置 元素与body的距离 还要把border算上(第一个border的大小不用算)
+    function getAbusolutedPosition(node) {
+      var x=0;
+      var y=0;
+      var firstNode=node;
+      while (node){
+        if(firstNode===node){
+          x+=node.offsetLeft;
+          y+=node.offsetTop;
+          node=node.offsetParent;
+        }else{
+          x+=node.offsetLeft+parseInt(window.getComputedStyle(node).borderLeftWidth);
+          y+=node.offsetTop+parseInt(window.getComputedStyle(node).borderTopWidth);
+          node=node.offsetParent;
+        }
+      }
+      return{
+        x:x,
+        y:y
+      }
+    }
+  var obj=getAbusolutedPosition(inner1Node)
+   console.log(obj)
+
+
+
+
+  }
+
+
+</script>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>扇形导航</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      user-select: none;
+    }
+    #app{
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      width: 68px;
+      height: 68px;
+
+
+    }
+    #app .btns{
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+
+    }
+    #app .btns img{
+      width: 51px;
+      height: 51px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 9px;
+      /*transition: 0.5s transform linear;*/
+
+    }
+    #app .home{
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 50%;
+      background: url("img/d1.png") no-repeat -7px;
+      transition: 0.5s transform linear;
+
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="btns">
+    <img src="img/z5.png">
+    <img src="img/z4.png">
+    <img src="img/z3.png">
+    <img src="img/z2.png">
+    <img src="img/z1.png">
+  </div>
+  <div class="home">
+  </div>
+</div>
+
+</body>
+<script>
+  //transform transition的参数顺序和个数必须保持一次 否则效果就很有可能失败
+ window.onload=function () {
+   var homeNode=document.querySelector("#app .home");
+   var imgs= document.querySelectorAll("#app .btns img");
+   var flag=true;
+   var length=imgs.length;
+   homeNode.addEventListener("mousedown",function (ev) {
+     ev=ev||event;
+     ev.preventDefault();
+   })
+
+   //扇形导航栏  home的逻辑
+   function dfs() {
+
+     //图片先旋转 然后把图片飞出去
+     homeNode.onclick=function () {
+       if(flag){
+         homeNode.style.transform="rotate(720deg)";
+         var C=-200;//左边是负
+         var deg=120/length-1;//5个小图就是 4个角 每个是22.5度 乘下标就是每个的值
+         imgs.forEach(function (item,index) {
+           item.style.transition="0.5s transform linear "+(index*0.1)+"s";
+           item.style.transform="translate("+getXY(C,deg*index).y+"px,"+getXY(C,deg*index).x+"px) rotate(-720deg) scale(1)";
+           item.oldTransform="translate("+getXY(C,deg*index).y+"px,"+getXY(C,deg*index).x+"px) rotate(-720deg)";
+
+         })
+
+       }else {
+         //大图转回来 小图回去
+         homeNode.style.transform="rotate(0)";
+         imgs.forEach(function (item,index) {
+           //下面的最快 上面的最慢
+           item.style.transition="0.5s transform linear "+((length-index)*0.1)+"s";
+           item.style.transform="translate(0px,0px) rotate(0) scale(1)";
+           item.oldTransform="translate(0px,0px) rotate(0)";
+
+         })
+
+       }
+       flag=!flag;
+     }
+
+
+
+   }
+   dfs();
+   //小图片的逻辑  点一下就放大一倍 然后在变回来 小图片旋转
+   function small() {
+     var imgs= document.querySelectorAll("#app .btns img")
+     imgs.forEach(function (item,index) {
+       item.onclick=function () {
+         this.style.opacity=.4;
+         this.style.transition=".5s transform linear"
+         this.style.transform=this.oldTransform+" scale(2)";
+
+
+         this.addEventListener("transitionend",FN)
+       }
+
+
+     })
+       function FN() {
+         this.style.opacity=1;
+         this.style.transition=".3s transform ease-in"
+         this.style.transform=this.oldTransform+" scale(1)";
+         this.removeEventListener("transitionend",FN);
+       }
+
+
+   }
+   small();
+
+
+
+   //这是移动的路线
+   function getXY(C,deg) {
+     var x=C*Math.cos(deg/180*Math.PI);
+     var y=C*Math.sin(deg/180*Math.PI);
+     return{
+       x:x,
+       y:y
+     }
+   }
+
+
+
+
+
+ }
+
+
+
+
+
+</script>
+</html>

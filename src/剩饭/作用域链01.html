@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  var a=1;
+  function app() {
+    console.log(a)
+  }
+  function wrap() {
+    var a=2;
+    app();
+  }
+  wrap()
+  //输出是1,因为函数调用是跳着用的 里面的a会去找全局作用域
+</script>
+</html>

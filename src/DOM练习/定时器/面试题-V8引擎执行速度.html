@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V8</title>
+</head>
+<body>
+
+</body>
+<script>
+  setTimeout(function () {
+    console.log(1);
+  },1000)
+  console.log(2);
+  for (var i=0;i<10000;i++){
+    console.log(999)
+  }
+  //V8会先执行下面的,触发事件后 会把异步函数放在一个异步队列里 等V8执行完在 回来执行 异步函数
+</script>
+</html>

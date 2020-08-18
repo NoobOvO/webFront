@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//左查询 对等号左边的进行查询 如果没有这个变量 会向上找 直到window声明这个变量
+//右查询 等号右边的进行查询 会报错 (ReferenceError)  比如console.log(a)
+//console.log(a)
+
+var a=1;
+var b=5;
+(function () {
+  var a=2;
+  function app() {
+    a=a+b;
+    console.log(a)
+  }
+app();
+})()
+
+
+
+
+  // a的值为3,不报错
+//a = 3;
+//console.log(a)
+
+  // 报错 a is not defined
+  //console.log(a);
+
+</script>
+</html>

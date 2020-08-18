@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>三棱柱</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    #wrap{
+      width: 500px;
+      height: 500px;
+      border: solid 1px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      perspective: 2000px;
+
+    }
+    #wrap #container{
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transform-style: preserve-3d;
+      transform-origin: center center -57.735026918962575px;
+      transition: 2s transform linear;
+
+    }
+    #container div{
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      margin: auto;
+      background: forestgreen;
+      line-height: 200px;
+      text-align: center;
+      border: solid 1px;
+      box-sizing: border-box;  /* 让每个正方形边框连在一起*/
+      left: 50px;
+      top: 50px;
+      transform-origin: center center -57.735026918962575px;  /*算基点*/
+
+
+    }
+    #container div:nth-child(1){
+      transform: rotateY(120deg);  /*转的是外角(360-内角和) */
+    }
+    #container div:nth-child(2){
+      transform: rotateY(240deg);
+    }
+    #container div:nth-child(3){
+      transform: rotateY(360deg);
+    }
+    #container:hover{
+      transform: rotateY(360deg);
+    }
+
+
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div id="container">
+    <div>one</div>
+    <div>two</div>
+    <div>three</div>
+  </div>
+</div>
+
+</body>
+</html>
+

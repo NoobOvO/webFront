@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BannerImg</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style type="text/less">
+    #wrap{
+
+      #app{
+        cursor: pointer;
+        height: 280px;
+        width: 520px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin:auto;
+        border: 2px solid;
+        overflow: hidden;
+        .points{
+          position: absolute;
+          list-style: none;
+          width: 100%;
+          height: 10px;
+          left: 45%;
+          bottom: 10px;
+
+        }
+        .points li{
+         margin-right: 5px;
+         float: left;
+          width: 10px;
+          height: 10px;
+          border: 1px solid pink;
+          border-radius: 50%;
+         background-color: white;
+
+
+        }
+        .points .active{
+         background-color: red;
+        }
+
+        &:hover span{
+          display: block;
+        }
+
+        span{
+          font-size: 40px;
+          width: 40px;
+          height: 60px;
+          background:rgba(128,128,128,.4) ;
+          position: absolute;
+          color: white;
+          text-align: center;
+          line-height: 60px;
+          top: 50%;
+          margin-top: -30px;
+          display: none;
+
+          &:hover{
+            background:rgba(128,128,128,.9) ;
+            cursor: pointer;
+          }
+
+        }
+        & .pre{
+          left: 10px;
+        }
+        & .next{
+          right: 10px;
+        }
+
+        .list{
+          list-style: none;
+          width: 2600px;
+          height:280px ;
+          position: absolute;
+
+
+
+          .item{
+            float: left;
+
+          }
+
+        }
+
+
+      }
+
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div id="app">
+
+    <ul class="list">
+      <li class="item">
+        <img src="img/b1.jpg">
+      </li>
+      <li class="item">
+        <img src="img/b2.jpg">
+      </li>
+      <li class="item">
+        <img src="img/b3.jpg">
+      </li>
+      <li class="item">
+        <img src="img/b4.jpg">
+      </li>
+      <li class="item">
+        <img src="img/b5.jpg">
+      </li>
+    </ul>
+    <span class="pre">&lt;</span>
+    <span class="next">&gt;</span>
+    <ul class="points">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</div>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+<script>
+  window.onload=function () {
+
+
+    function banner() {
+      var pre=document.querySelector(".pre");
+      var next= document.querySelector(".next");
+      var list= document.querySelector(".list");
+      var points=document.querySelectorAll(".points li");
+      var app=document.querySelector("#app");
+
+        var index=0;
+      pre.onclick=function () {
+        index--;
+        move();
+        coco();
+      }
+
+      next.onclick=function () {
+        index++;
+        move();
+        coco();
+      }
+      function move() {
+        index=index<0?4:index;
+        index=index>4?0:index;
+        var L=-520*index;
+
+        list.style.left=L+"px";
+      }
+      //小点点
+      function pointss() {
+        points.forEach(function (item,indexr) {
+          item.onclick=function (ev) {
+            ev=ev||event;
+            index = indexr;
+            move();
+          }
+        })
+      }
+      pointss();
+        //小点点的颜色
+      function coco() {
+        points.forEach(function (item,aha) {
+          item.classList.remove("active");
+          points[index].classList.add("active");
+        })
+      }
+     //轮播图计时器
+      var timer=0;
+     function time() {
+       timer= setInterval(function () {
+          index++;
+          move();
+        },2000)
+      }
+      time();
+      //鼠标放置图片悬停
+      function stop(){
+        list.onmouseenter=function (ev) {
+          ev=ev||event;
+          clearInterval(timer);
+        }
+      }
+     stop();
+   //鼠标离开图片继续动
+         function start() {
+           list.onmouseleave=function (ev) {
+             ev=ev||event;
+             time();
+           }
+         }
+     start();
+
+
+    }
+
+    banner();
+
+
+
+
+
+
+  }
+
+  //需求总结
+  //1.轮播图左右切换
+  //2.轮播图小点点选中
+  //3.轮播图计时器
+  //4.轮播图悬停
+  //5.改变小点点的颜色
+
+
+</script>
+</html>

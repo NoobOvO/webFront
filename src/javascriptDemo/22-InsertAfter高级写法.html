@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InsertAfter</title>
+</head>
+<body>
+<div id="app">我是app</div>
+</body>
+<script>
+
+  //在元素节点后面插入节点
+  //高级写法 谁都可以用
+/*  HTMLElement 对象的属性
+  一个 HTML 文档中的每个元素都有和元素的 HTML 属性对应的属性。这里列出了所有 HTML 标记都支持的属性。其他的属性，都特定于某种具体的 HTML 标记。HTMLElement 对象继承了 Node 和 Element 对象的标准属性，也实现了下面所描述的几个非标准属性：*/
+
+
+
+//构造函数的显示原型 定义了一个方法 所有的元素
+  HTMLElement.prototype.insertAfter=function insertAfter(newNode) {
+    //this表示目标节点  newNode表示要插入的节点
+    var father= this.parentNode;
+    if(father.lastElementChild === this){
+      father.appendChild(newNode);
+    }else {
+      father.insertBefore(newNode,this.nextElementSibling);
+    }
+  }
+
+
+  window.onload=function () {
+    var app=document.querySelector("#app");
+    var span=document.createElement("span");
+    app.insertAfter(span)
+  }
+</script>
+</html>

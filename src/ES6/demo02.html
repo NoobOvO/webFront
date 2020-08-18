@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  //const声明变量偏静态 你不能改变它  不能重新赋值 如果是对象,可以重新赋值
+  //let声明变量可以改变
+  let a=20;
+  a=40;
+  console.log(a); //40
+
+  const  b=50;
+  // b =70; 直接给你个波浪线 报错
+  console.log(b);//Uncaught TypeError: Assignment to constant variable.
+
+  const Person ={
+    name:"lili",
+    age:40
+  }
+   Person.age=100;
+  console.log(Person) //age: 100 name: "lili" __proto__: Object
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>光斑动画</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html,body{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #app{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    #app #zed{
+      font-size: 50px;
+      color: rgba(128,128,128,.5);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      background-repeat: no-repeat;
+      background-image: linear-gradient(26deg, rgba(255,255,255,0) 100px,rgba(255,255,255,1) 150px,rgba(255,255,255,0) 200px);
+      -webkit-background-clip: text;
+      animation: move 3s linear infinite;
+
+
+    }
+  @keyframes move{
+    from{
+      background-position: -200px 0;
+    }
+    to{
+      background-position: 600px 0;
+    }
+  }
+    /* 切出一个斜的光斑，让他移动 光斑属于背景图 让文字半透明 光斑不能repeat 利用动画进行移动 -webkit-background-clip: text; 光斑印在文字后面 其余部分全部切除*/
+    /*没有让光斑重0位置开始渐变，但并不会影响效果，因为有动画进行移动，光斑相当于给切出来你想要的一块*/
+
+   /* 把字体换成透明，效果出乎意料*/
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="zed">
+    我祈求神明满足你的一切心愿
+  </div>
+</div>
+
+</body>
+</html>

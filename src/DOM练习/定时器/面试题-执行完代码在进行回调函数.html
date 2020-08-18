@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  for (var i = 0; i < 5; i++) {
+    (function (i) {
+    setTimeout(function () {
+      console.log(i)
+    },1000*i)
+    })(i)
+  }
+  for (var i=0;i<10000;i++) {
+    console.log("哈哈哈")
+  }
+//效果就是先执行下面的 哈哈哈 然后 一秒钟输出1个i
+  //但是 过程中 每一秒 异步线程将 闭包(在堆中)给的i放到了队列中 先进先出的原则  输出完下面的哈哈哈之后 就会执行每一秒的i
+
+
+
+
+</script>
+</html>
