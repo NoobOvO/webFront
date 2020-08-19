@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FL</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+
+    #wrap .header{
+      height: 200px;
+      width: 100%;
+      background: black;
+      color: white;
+    }
+    #wrap .footer{
+      height: 200px;
+      width: 100%;
+      background: green;
+    }
+    #wrap .box .content{
+      flex: auto;  /* 可伸可缩*/
+      height: 400px;
+      background-color: #ee9900;
+
+
+    }
+    #wrap .box .left{
+
+      height: 400px;
+      width: 200px;
+      background-color: blue;
+    }
+    #wrap .box .right{
+
+      height: 400px;
+      width: 200px;
+      background-color: red;
+    }
+    .box{
+      height: 400px;
+      display: flex;
+    }
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div class="header">head</div>
+  <div class="box">
+    <div class="left">left</div>
+    <div class="content" >content</div>
+    <div class="right">right</div>
+  </div>
+  <div class="footer">foot</div>
+</div>
+
+</body>
+<script>
+  /*
+  * 一个是把父盒子设置flex 一个是把没有宽的中心盒子设置flex:auto可伸可缩
+  * */
+</script>
+</html>
