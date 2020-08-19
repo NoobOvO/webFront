@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+  <style>
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+        font-size: 14px;
+      }
+      a{
+        text-decoration: none;
+        color: rgba(0,0,0,.7);
+      }
+      ul{
+        list-style: none;
+      }
+      html,body,#wrap{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      #wrap{
+        background: url("img/bg.jpg");
+        background-size: cover;
+        display: flex;
+
+      }
+      #wrap .head{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 70px;
+        background-color: rgba(0,0,0,.7);
+        display: flex;
+       justify-content: space-between;
+        align-items: center;
+
+
+      }
+      #wrap .head img{
+        padding-left: 15px;
+      }
+
+      #wrap .head ul{
+        height: 70px;
+        display: flex;
+        width: 275px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15px;
+
+      }
+      #wrap .head ul li{
+
+      }
+
+      #wrap .head a{
+        display: block;
+        width: 85px;
+        height: 35px;
+        color: white;
+        border: 1px white solid;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 35px;
+      }
+
+      #wrap .contain{
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+      }
+      #wrap .contain .ulist {
+        height: 210px;
+        width: 1000px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+
+      }
+      #wrap .contain .ulist li a{
+        height: 210px;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+
+
+
+      }
+      .ulist li:nth-child(1){
+        background-color: #595CA8;
+      }
+      .ulist li:nth-child(2){
+        background-color: #FF9D2E;
+      }
+      .ulist li:nth-child(3){
+        background-color: #01A6DE;
+      }
+      .ulist li:nth-child(4){
+        background-color: #015E91;
+      }
+      .ulist li:nth-child(5){
+        background-color: #1DC128;
+      }
+      .ulist li:nth-child(6){
+        background-color: #01A6DE;
+      }
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div class="head">
+    <img src="img/atguigu-logo.png">
+    <ul class="haha">
+      <li><a href="javascript:">新学科</a></li>
+      <li><a href="javascript:">学科简介</a></li>
+      <li><a href="javascript:">上海校区</a></li>
+    </ul>
+  </div>
+  <div class="contain">
+    <ul class="ulist">
+      <li>
+        <a href="javascript:">
+          <img src="img/ywfw_1.png">
+          <span>H5学科</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:">
+          <img src="img/ywfw_2.png">
+          <span>Java科学</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:">
+          <img src="img/ywfw_3.png">
+          <span>云计算</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:">
+          <img src="img/ywfw_4.png">
+          <span>Android学科</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:">
+          <img src="img/ywfw_5.png">
+          <span>微信小程序</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:">
+          <img src="img/ywfw_6.png">
+          <span>PHP学科</span>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+
+
+</body>
+<script>
+  window.onload=function () {
+    var ann=document.querySelectorAll("#wrap .contain .ulist li a");
+    ann.forEach(function (item) {
+      item.onmousemove=function (ev) {
+        ev=ev||event;
+        this.style.cursor="default";
+
+      }
+
+    })
+  }
+</script>
+</html>
