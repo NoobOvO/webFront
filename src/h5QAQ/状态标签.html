@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZT</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    meter{
+      width: 400px;
+      height: 100px;
+    }
+    meter::-webkit-meter-bar{
+      background: white;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+<meter></meter><br>
+<meter value="1"></meter><br>
+<meter min="0" max="100" value="50"></meter><br>
+<progress value="50" max="100"></progress><br>
+<span>电量</span><br>
+<meter value="19"  optimum="60" low="20" high="40" max="100" min="0"></meter>
+<!--
+电量：
+最优值取值范围：绿色
+离最优值近的一段： 黄色
+离最优值远的一段:  红色
+
+
+meter属性:
+max:最大值
+min:最小值
+high:高阈值
+low:低阈值
+optimum:最优值
+
+设置meter样式: 对谷歌有用  火狐直接用css设置就可以
+meter {
+    /* 可以设置宽高 */
+}
+meter::-webkit-meter-bar {
+    /* 可以设置总体边框，空白区域背景等 */
+}
+meter::-webkit-meter-optimum-value {
+    /* 设置最优值范围内的样式 */
+}
+meter::-webkit-meter-suboptimum-value {
+    /*凑合 范围内的样式*/
+}
+meter::-webkit-meter-even-less-good-value {
+    /*糟糕 范围内的样式*/
+}
+
+
+
+-->
+
+
+
+
+</body>
+</html>

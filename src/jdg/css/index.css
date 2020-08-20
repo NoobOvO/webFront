@@ -441,6 +441,15 @@ body #container #main #m-v #m-4 .news .news-bottom ul li{
   margin-left: 15px;
   margin-bottom: 6px;
 
+
+}
+body #container #main #m-v #m-4 .news .news-bottom ul li a{
+  /*单行显示省略号 1.文本盒子有固定宽度 2.overflow:hidden 3.text-overflow:ellipsis 4:white-space:nowrap*/
+  width: 156px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+
 }
 body #container #main #m-v #m-4 .news .news-bottom ul li a span{
   height: 16px;
@@ -453,6 +462,7 @@ body #container #main #m-v #m-4 .news .news-bottom ul li a span{
   margin-right: 6px;
 
 }
+
 body #container #main #m-v #m-4 .news .news-bottom{
   position: absolute;
   top: 24px;

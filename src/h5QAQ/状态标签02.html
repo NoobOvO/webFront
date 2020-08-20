@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    progress{
+      width: 500px;
+      height: 50px;
+
+      border: 1px solid #ccc;
+      background: #f90;
+
+      /*edge的有色区域*/
+      color: #f90;
+    }
+    /*chrom的白色区域*/
+    progress::-webkit-progress-bar{
+      background: grey;
+    }
+    /*firefox的有色进度条区域*/
+    progress::-moz-progress-bar{
+      background: blue;
+    }
+    progress::-webkit-progress-value{
+      background: red;
+    }
+
+
+  </style>
+</head>
+<body>
+<progress value="30" max="100">
+
+</progress>
+</body>
+</html>
