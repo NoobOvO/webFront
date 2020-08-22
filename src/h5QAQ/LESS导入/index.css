@@ -1,0 +1,9 @@
+@import "shrink.css";
+.box {
+  width: 500px;
+  height: 500px;
+  background: red;
+  border: 1px solid skyblue;
+  font-size: 40px;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动优先</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .contain{
+      width: 100%;
+      height: 400px;
+      background-color: #b3d4fc;
+      margin: 0 auto;
+
+    }
+    @media (min-width: 768px) {
+      .contain{
+        width: 750px;
+      }
+    }
+    @media (min-width: 992px) {
+      .contain{
+        width: 970px;
+      }
+    }
+    @media (min-width: 1200px) {
+      .contain{
+        width: 1170px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="contain"></div>
+
+</body>
+</html>

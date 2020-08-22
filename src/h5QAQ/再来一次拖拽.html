@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖就硬拖</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .box{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #f90;
+    }
+  </style>
+</head>
+<body>
+ <div class="box"></div>
+</body>
+<script>
+  (function () {
+  var box=  document.querySelector(".box");
+
+
+box.onmousedown=function (ev) {
+   var startX=ev.clientX-box.offsetLeft;
+  var startY=ev.clientY-box.offsetTop;
+
+
+  document.onmousemove=function (ev) {
+      var nowX=ev.clientX-startX;
+    var nowY=ev.clientY-startY;
+
+    //条件判断
+    if(nowX<0){
+      nowX=0;
+    }else if(nowX>(window.innerWidth-box.offsetWidth)){
+      nowX=window.innerWidth-box.offsetWidth;
+    }
+
+    if(nowY<0){
+      nowY=0;
+    }else if(nowY>(window.innerHeight-box.offsetHeight)){
+      nowY=window.innerHeight-box.offsetHeight;
+    }
+
+
+
+
+
+    box.style.left=nowX+"px";
+    box.style.top=nowY+"px";
+
+
+  }
+
+  document.onmouseup=function (ev) {
+    document.onmousemove=null;
+
+  }
+
+
+}
+
+
+
+
+
+  })();
+
+
+
+
+
+
+
+</script>
+</html>

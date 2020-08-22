@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas(画布)</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    canvas{
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+</body>
+<script>
+  (function () {
+    var can=document.querySelector("#myCanvas");
+    can.width=600;
+    can.height=600;
+   var ctx= can.getContext('2d');
+   ctx.lineWidth=5;
+   ctx.strokeStyle="#f90";
+   ctx.moveTo(100,100);
+   ctx.lineTo(500,100);
+    ctx.stroke();
+
+  })();
+
+
+</script>
+</html>

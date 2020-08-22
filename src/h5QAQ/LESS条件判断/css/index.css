@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+}
+.box {
+  width: 0;
+  height: 0;
+  border-width: 80px;
+  border-style: solid;
+  border-color: #f90 transparent transparent transparent;
+}
+/*# sourceMappingURL=index.css.map */

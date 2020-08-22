@@ -1,0 +1,59 @@
+
+/*非混合输出(box不会输出) 可以反复调用*/
+.box(){
+  width: 200px;
+  height: 200px;
+  background: #0b15ef;
+  border: 1px solid red;
+
+}
+.box-test{
+.box();
+}
+/*------------------带参数的混合引用------------------------*/
+.box(@width,@height,@color){
+  width: @width;
+  height: @height;
+  background: @color;
+  border: 1px solid red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -@width/2;
+  margin-top: -@height/2;
+
+}
+.wrap{
+  .box(200px,200px,red);
+}
+/*带默认值的参数一定要往后放*/
+/*混合可以指定参数,无所谓顺序*/
+.boxing(@width,@height:300px,@color){
+  width: @width;
+  height: @height;
+  background: @color;
+  border: 1px solid red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -@width/2;
+  margin-top: -@height/2;
+
+}
+.con{
+  .boxing(@color:skyblue,@width:800px ,@height: 600px);
+}
+
+/*@arguments关键字*/
+.transition(@prop:all,@duration:0s,@timing-function:ease,@delay:0s){
+  /*-webkit-transition: @prop @duration @timing-function @delay;
+  -moz-transition: @prop @duration @timing-function @delay;
+  transition: @prop @duration @timing-function @delay;*/
+  -webkit-transition:@arguments;
+  -moz-transition: @arguments;
+  transition: @arguments;
+
+}
+.cool{
+  .transition(all,2s,linear,10s);
+}

@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  width: 400px;
+  height: 400px;
+  background-color: #f90;
+}

@@ -1,0 +1,25 @@
+/*这是CSS的注释*/
+
+//这是less的注释 css文件看不到的 会被忽略掉
+
+
+//@{变量}  属性名
+@partenName:background-color;
+.contain{
+  @{partenName}:#f90;
+}
+//类名
+@className:active;
+.@{className}{
+color: #f90;
+}
+
+.new_list{
+  @width:90px;
+  li{
+    @width:150px;
+    width: @width; //100px 先计算声明 最后赋值
+    @width:100px;
+  }
+
+}

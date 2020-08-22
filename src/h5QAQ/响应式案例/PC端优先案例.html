@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PC端优先</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .contain{
+      width: 1200px;
+      height: 400px;
+      background-color: #b3d4fc;
+      margin: 0 auto;
+
+    }
+     @media (max-width: 992px) {
+       .contain{
+         width: 900px;
+       }
+     }
+    @media (max-width: 768px) {
+      .contain{
+        width: 720px;
+      }
+    }
+    @media (max-width: 576px) {
+      .contain{
+        width: 520px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="contain"></div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+/*非混合输出(box不会输出) 可以反复调用*/
+.box-test {
+  width: 200px;
+  height: 200px;
+  background: #0b15ef;
+  border: 1px solid red;
+}
+/*------------------带参数的混合引用------------------------*/
+.wrap {
+  width: 200px;
+  height: 200px;
+  background: red;
+  border: 1px solid red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+/*带默认值的参数一定要往后放*/
+/*混合可以指定参数,无所谓顺序*/
+.con {
+  width: 800px;
+  height: 600px;
+  background: skyblue;
+  border: 1px solid red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -300px;
+}
+/*@arguments关键字*/
+.cool {
+  /*-webkit-transition: @prop @duration @timing-function @delay;
+  -moz-transition: @prop @duration @timing-function @delay;
+  transition: @prop @duration @timing-function @delay;*/
+  -webkit-transition: all 2s linear 10s;
+  -moz-transition: all 2s linear 10s;
+  transition: all 2s linear 10s;
+}
+/*# sourceMappingURL=index02.css.map */

@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+}
+.cool(@chang){
+  width: 0;
+  height: 0;
+  border-width: @chang;
+  border-style: solid;
+
+}
+.arrow(@derction,@chang,@color:#ccc) when(@derction=up){
+  .cool(@chang);
+  border-color: transparent transparent @color transparent;
+}
+.arrow(@derction,@chang,@color:#ccc) when(@derction=down){
+  .cool(@chang);
+  border-color:@color transparent transparent  transparent;
+}
+.arrow(@derction,@chang,@color:#ccc) when(@derction=left){
+  .cool(@chang);
+  border-color: transparent transparent  transparent @color;
+}
+.arrow(@derction,@chang,@color:#ccc) when(@derction=right){
+  .cool(@chang);
+  border-color: transparent @color transparent  transparent;
+}
+
+.box{
+  .arrow(down,80px,#f90);
+}
