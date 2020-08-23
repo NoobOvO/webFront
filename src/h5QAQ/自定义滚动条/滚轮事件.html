@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚轮事件(你要考虑两个浏览器)</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .box{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 400px;
+      height: 400px;
+      background-color: #0b15ef;
+
+
+    }
+
+
+
+  </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+<script>
+  window.onload=function () {
+  let boxNode=  document.querySelector(".box");
+  //chrome ie
+    document.onmousewheel=Ftn;
+    document.addEventListener("DOMMouseSroll",Ftn);
+
+    function Ftn(ev) {
+      var str="";
+      if(ev.wheelDelta){
+        if(ev.wheelDelta>0){
+      str="up";//120
+        }else if(ev.wheelDelta<0){
+      str="down";
+        }
+
+      }else if(ev.detail){
+        if(ev.detail>0){
+          str="down";//120
+        }else if(ev.detail<0){
+          str="up";
+        }
+
+      }
+
+
+      if(str=="up"){
+        boxNode.style.width=boxNode.offsetWidth+5+"px";
+        boxNode.style.height=boxNode.offsetHeight+5+"px";
+      }else if(str=="down"){
+        boxNode.style.width=boxNode.offsetWidth-5+"px";
+        boxNode.style.height=boxNode.offsetHeight-5+"px";
+      }
+
+
+
+
+    }
+
+
+
+
+  }
+
+
+
+
+</script>
+</html>

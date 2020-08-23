@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    html,body{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .content{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+    .scroll{
+     height: 100%;
+     width: 20px;
+      background-color: #b3d4fc;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .buss{
+      width: 100%;
+      height: 40px;
+      background-color: #d03641;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="content"></div>
+<div class="scroll">
+  <div class="buss"></div>
+</div>
+</body>
+<script>
+  //需求
+  //1.基本拖拽功能
+  //2.拖动滑块 内容变化
+  //3.滑块大小随内容变化
+  //4.滚动滑轮变化内容
+
+  //注意点:
+  //1.变化位置的元素别忘了加定位
+  //2.注意style和offsetheight的区分 css属性要加单位 offsetheight只是一个数值,没有单位
+  window.onload=function () {
+   let scroll=  document.querySelector(".scroll");
+   let  buss=  document.querySelector(".buss");
+   let content =  document.querySelector(".content");
+    for (let i = 0; i < 300; i++) {
+      content.innerHTML+=i+"<br>";
+    }
+    //滑块随内容变化 与内容不同的是 滑块会变成一个死值 H/conH=t/H
+      buss.style.height=  window.innerHeight/content.offsetHeight*window.innerHeight+"px";
+    if(window.innerHeight/content.offsetHeight>=1){ //如果内容过少 删除滚动条
+      buss.remove();
+    }
+   //先让滚动条拖起来
+    buss.onmousedown=function (ev) {
+      ev.preventDefault();
+    let  bussY= ev.clientY-buss.offsetTop;
+
+
+      document.onmousemove=function (ev) {
+        let moveY=ev.clientY-bussY;
+         FTN(moveY);
+      }
+      document.onmouseup=function (ev) {
+        document.onmousemove=null;
+      }
+
+
+
+    }
+
+    //滚轮事件
+    document.onmousewheel=wheel;  //chrome ie
+    document.addEventListener("DOMMouseScroll",wheel); //firefox
+    //兼容浏览器 滑动时 内容变 并限定滑块的范围
+      function wheel(ev) {
+        if(ev.wheelDelta){ //这是chrome的 如果是 判断
+
+         if(ev.wheelDelta>0){//上移动
+           buss.style.top= buss.offsetTop-5+"px"; //其实这个位置变化都计算好了 所以不用管 给个变化的值就可以了
+           FTN(buss.offsetTop);
+
+         }else if(ev.wheelDelta<0) {//下移动
+           buss.style.top= buss.offsetTop+5+"px";
+           FTN(buss.offsetTop);
+
+         }
+
+        }else if(ev.detail){//火狐的  它和chrome的方向刚好相反
+
+          if(ev.detail>0){//下移动
+            buss.style.top= buss.offsetTop+5+"px"; //其实这个位置变化都计算好了 所以不用管 给个变化的值就可以了
+            FTN(buss.offsetTop);
+
+          }else if(ev.detail<0) {//上移动
+            buss.style.top= buss.offsetTop-5+"px";
+            FTN(buss.offsetTop);
+
+          }
+
+         //emmm...大功告成 测试成功!
+        }
+
+
+
+      }
+
+
+//内容动 滑块动 范围限定 参数是滑块的当前位置
+function FTN(moveY) {
+  let maxHeight=window.innerHeight-buss.offsetHeight;
+  if(moveY<0){
+    moveY=0;
+  }else if(moveY>maxHeight){
+    moveY=maxHeight;
+  }
+  //滑块动
+  buss.style.top=moveY+"px";
+
+  //滑块比率
+  let scale=moveY/(maxHeight);
+  //内容动
+  content.style.top = -(content.offsetHeight-window.innerHeight)*scale+"px";
+
+}
+  }
+
+</script>
+</html>
