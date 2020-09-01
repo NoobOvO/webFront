@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/taobaodemo/css/index.css" line="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33a796be-b120-4e5f-a2fe-6a121cfec518" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="33a796be-b120-4e5f-a2fe-6a121cfec518" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -88,7 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS/css/index02.less" />
         <option value="$PROJECT_DIR$/src/h5QAQ/LESS条件判断/index.html" />
         <option value="$PROJECT_DIR$/src/h5QAQ/LESS条件判断/css/index.less" />
         <option value="$PROJECT_DIR$/src/h5QAQ/LESS导入/mixs.less" />
@@ -139,13 +136,14 @@
         <option value="$PROJECT_DIR$/src/移动端触屏案例/css/index.css" />
         <option value="$PROJECT_DIR$/src/移动端触屏案例/index.html" />
         <option value="$PROJECT_DIR$/src/移动端触屏案例/js/swiper.js" />
+        <option value="$PROJECT_DIR$/src/GIT/hello.md" />
       </list>
     </option>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="y" value="35" />
     <option name="width" value="1750" />
@@ -170,26 +168,6 @@
               <item name="stromboy" type="b2602c69:ProjectViewProjectNode" />
               <item name="stromboy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stromboy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stromboy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="移动端触屏案例" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stromboy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stromboy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="移动端触屏案例" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stromboy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stromboy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="移动端触屏案例" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,15 +249,15 @@
       <workItem from="1597325469011" duration="149527000" />
       <workItem from="1598075341481" duration="115900000" />
       <workItem from="1598794478142" duration="9050000" />
-      <workItem from="1598853583663" duration="13993000" />
+      <workItem from="1598853583663" duration="14645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="664158000" />
+    <option name="totallyTimeSpent" value="664810000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22523117" />
@@ -328,13 +306,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/LESS嵌套/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/h5QAQ/LESS嵌套/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-351" />
@@ -655,6 +626,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="91" column="74" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GIT/hello.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="13" selection-start-column="13" selection-end-column="13" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
