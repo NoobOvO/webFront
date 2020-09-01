@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>触摸移动</title>
+  <style>
+    html,body,#app{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100px;
+      width: 100px;
+      background-color: #0b15ef;
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+
+<div class="box"></div>
+
+
+
+</div>
+
+
+</body>
+<script>
+  window.onload=function () {
+    var box=  document.querySelector(".box");
+    var app=  document.querySelector("#app");
+    //按下手指头
+    var strX;
+    var strY;
+    box.addEventListener("touchstart",function (ev) {
+     var  finger=   ev.targetTouches[0];  //从touchList种获得touch对象
+       strX= finger.clientX-box.offsetLeft;
+       strY= finger.clientY-box.offsetTop;
+
+    })
+    //手指头移动啦
+    box.addEventListener("touchmove",function (ev) {
+      var  finger=   ev.targetTouches[0];  //从touchList种获得touch对象
+    var fx=  finger.clientX-strX;
+    var fy=   finger.clientY-strY;
+    if(fx<0){
+      fx=0;
+      }
+    if(fy<0){
+      fy=0;
+    }
+    if(fx>app.clientWidth-box.offsetWidth){
+      fx=app.clientWidth-box.offsetWidth;
+    }
+      if(fy>app.clientHeight-box.offsetHeight){
+        fy=app.clientHeight-box.offsetHeight;
+      }
+
+
+
+     box.style.left =   fx+"px";
+     box.style.top  =   fy+"px";
+
+
+    })
+
+
+
+
+  }
+
+</script>
+</html>
+
+

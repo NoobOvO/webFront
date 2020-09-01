@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMJS</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 100px;
+    }
+    html,body,#app{
+      width: 100%;
+      overflow: hidden;
+    }
+
+    body{
+      font: 16px "Microsoft Himalaya";
+    }
+    .box{
+      width: 3.75rem;
+      height: 3rem;
+      background-color: lime;
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="box">
+    你好啊
+  </div>
+</div>
+</body>
+<script>
+  window.onload=function () {
+    //算比例啦
+    //设计稿的宽度
+    var designW=375;
+    //比例 当前布局视口与设计稿宽度的比例
+    var scaleW=document.documentElement.clientWidth/designW;
+    //更改当前根标签的字体 100为默认字体大小
+    document.documentElement.style.fontSize=100*scaleW+"px";
+
+  }
+
+</script>
+</html>

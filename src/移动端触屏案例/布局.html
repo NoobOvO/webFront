@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit:cover">
+    <title>触摸滑动</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body,html,#app{
+      width: 100%;
+      height: 100%;
+    }
+    #app .banners{
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    #app .banners .banners-items{
+     display: flex;
+    }
+    #app .banners .banners-items li{
+      list-style: none;
+    }
+    #app .banners .banners-items li a img{
+      width: 100%;
+    }
+
+    #app .banners .dots{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 8px;
+      text-align: center;
+      font-size: 0;
+    }
+    #app .banners .dots span{
+      margin: 0 3px;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #cccccc;
+    }
+    #app .banners .dots span.active{
+      background-color: deeppink;
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="banners">
+    <ul class="banners-items">
+      <li><a href="javascript:"><img src="img/1.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/2.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/3.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/4.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/5.jpg"></a></li>
+    </ul>
+  <div class="dots">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  </div>
+
+</div>
+
+</body>
+<script>
+  window.onload=function () {
+    //动态变化轮播图区域长度
+    var bannersitemsLi=document.querySelectorAll(".banners-items li");
+    var bannersitems=document.querySelector(".banners-items");
+    bannersitems.style.width=bannersitemsLi.length*100+"%";
+    bannersitemsLi.forEach(function (item) {
+      item.style.width=100/bannersitemsLi.length+"%";
+    })
+
+  }
+</script>
+</html>

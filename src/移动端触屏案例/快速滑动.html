@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit:cover">
+  <title>触摸拖动</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body,html,#app{
+      width: 100%;
+      height: 100%;
+    }
+    #app .banners{
+      width: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+    }
+    #app .banners .banners-items{
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+    }
+    #app .banners .banners-items li{
+      list-style: none;
+    }
+    #app .banners .banners-items li a img{
+      width: 100%;
+    }
+
+    #app .banners .dots{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 8px;
+      text-align: center;
+      font-size: 0;
+    }
+    #app .banners .dots span{
+      margin: 0 3px;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #cccccc;
+    }
+    #app .banners .dots span.active{
+      background-color: deeppink;
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="banners">
+    <ul class="banners-items">
+      <li><a href="javascript:"><img src="img/1.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/2.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/3.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/4.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/5.jpg"></a></li>
+    </ul>
+    <div class="dots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+<script>
+  //复制 把索引掉个 1=6 10=5
+  window.onload=function () {
+    //动态变化轮播图区域长度
+    var app=   document.querySelector("#app");
+    var banners=  document.querySelector(".banners"); //子元素设置定位后 包裹元素没有内容撑开 需要给他个高度 图片加载完设置高度
+    var itemLength= document.querySelectorAll(".banners-items li").length; //复制前li的宽度
+    var bannersitems=document.querySelector(".banners-items");
+    var index=0; //切换轮播图的索引
+    var spandots =document.querySelectorAll(".dots span");
+
+    bannersitems.innerHTML+=bannersitems.innerHTML; //复制一份
+    var bannersitemsLi=document.querySelectorAll(".banners-items li"); //重新获取LI
+
+    bannersitems.style.width=bannersitemsLi.length*100+"%";
+    bannersitemsLi.forEach(function (item) {
+      item.style.width=100/bannersitemsLi.length+"%";
+    })
+    banners.style.height=bannersitems.offsetHeight+"px";
+
+
+
+
+    //定时
+    var timeId= setInterval(function () {
+      index++;
+      bannersitems.style.transition=".5s"; //过度效果
+      setBannersIndex(index);
+    },2000);
+    //过渡完调用
+    bannersitems.addEventListener("transitionend",timeOOO);
+
+
+
+
+
+
+
+
+    //滑动
+    banners.addEventListener("touchstart",function(ev) {
+      bannersitems.style.transition="none"; //取消过度效果
+      //无缝衔接的最后一步 下标变化 0变5 9变4 给你一种错觉的环形结构
+      if(index<=0){   //踩的坑  位置写上面 不然衔接不了
+        index=itemLength;
+        bannersitems.style.left=-index*banners.clientWidth+"px";
+      }else if(index>=bannersitemsLi.length-1){
+        index=itemLength-1;
+        bannersitems.style.left=-index*banners.clientWidth+"px";
+      }
+
+      var touch=  ev.changedTouches[0];
+      this.startX=touch.clientX; //开始滑动
+      this.cleX=bannersitems.offsetLeft;//开始位置
+
+      clearInterval(timeId);//时间静止
+     this.startTime= (new Date).getTime();
+
+      ev.preventDefault();
+
+    })
+
+    banners.addEventListener("touchmove",function(ev) {
+      var touch= ev.targetTouches[0];
+      var endX=touch.clientX; //开始滑动
+      this.allX= endX-this.startX; //滑动的距离
+      this.maxX=this.cleX+this.allX;
+
+      bannersitems.style.left=this.maxX+"px"; //滑动的状态
+
+    })
+
+    //切换  轮播图的切换  我认为一样适用于PC端 给全局一个index 然后改变大包含块的left值
+    banners.addEventListener("touchend",function (ev) {
+      bannersitems.style.transition=".5s"; //松手后 延时0.5m
+
+      //index范围判断
+      if(index<0){
+        index=0;
+      }
+      if(index>bannersitemsLi.length-1){
+        index=bannersitemsLi.length-1;
+      }
+
+
+      //结束时间
+    var endTime=  (new Date).getTime();
+          var disTime=endTime-this.startTime;
+          if(disTime<500){
+            //快滑
+            if(this.allX<0){
+              index++;
+            }else if(this.allX>0){
+              index--;
+            }
+          }else if(disTime>500){
+            if(Math.abs(this.allX)>bannersitemsLi[0].clientWidth/2){
+              if(this.allX<0){
+                //向左划 下一张
+                index++;
+              }else if(this.allX>0){
+                //向右滑 上一张
+                index--;
+              }
+            }
+          }
+
+      //轮播图的位置
+      setBannersIndex(index);
+
+
+      timeId= setInterval(function () {
+        index++;
+        bannersitems.style.transition=".5s"; //过度效果
+        setBannersIndex(index);
+      },2000);  //重新开始
+
+    })
+
+
+
+    //轮播图的具体位置  active的高亮
+    function setBannersIndex(current) {
+      bannersitems.style.left=-banners.clientWidth*current+"px";
+      spandots.forEach(function (item) {
+        item.classList.remove("active");
+      });
+      spandots[current%spandots.length].classList.add("active"); //0和5的余数是0  1和5的余数是1 2 3 4 0 1 2 3 4
+      //感觉都是一些巧妙的小算法
+    }
+    function timeOOO() {
+      if(index>=bannersitemsLi.length-1){
+        index=itemLength-1;
+        bannersitems.style.transition="none"; //取消过度效果
+        bannersitems.style.left=-index*banners.clientWidth+"px";
+      }
+    }
+
+  }
+</script>
+</html>
+

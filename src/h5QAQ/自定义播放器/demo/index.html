@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义播放器</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    html,body{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #player{
+        height: 100%;
+        background-color: #383838;
+        display: flex;
+        flex-direction: column;
+
+
+
+    }
+    #player #video{
+      height: 300px;
+         flex: auto;
+
+    }
+    #player #tes{
+      flex: none;
+      height: 25px;
+      background-color: #2A2A2A;
+      display: flex;
+    }
+   #player #tes #left{
+     position: relative;
+     width: 55px;
+     height: 25px;
+     display: flex;
+     flex: none;
+    justify-content: space-between;
+     align-items: center;
+
+   }
+    #player #tes #left .start-btn{
+      position: absolute;
+      left: 8px;
+      width: 9px;
+      height: 11px;
+      background: url("img/icon.png") no-repeat;
+      background-position: 0 -22px;
+
+    }
+    #player #tes #left .active{
+      position: absolute;
+      left: 8px;
+      width: 9px;
+      height: 11px;
+      background: url("img/icon.png") no-repeat;
+      background-position: 0 -11px;
+
+    }
+    #player #tes #left .end-btn{
+      position: absolute;
+      right: 8px;
+      width: 9px;
+      height: 11px;
+      background: url("img/icon.png") no-repeat;
+      background-position: 0 0;
+    }
+    /*滚动条*/
+    #player #progress{
+      position: relative;
+      flex: auto;
+    }
+    #player #progress .progress-gray{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 100%;
+        height: 3px;
+        background: #737373;
+    }
+    #player #progress .sliderBar{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 9px;
+      height: 7px;
+      background-color: white;
+      border-radius: 2px;
+
+    }
+    #player #progress .progress-pink{
+      width: 0;
+      background-color: deeppink;
+
+    }
+
+    #player #right{
+      flex: none;
+       height: 25px;
+      width: 230px;
+      display: flex;
+      align-items: center;
+    }
+    #player #right .time{
+     width: 120px;
+      font-size: 12px;
+      color: white;
+      text-align: center;
+
+
+    }
+
+    #player #right .volume{
+      display: flex;
+      align-items: center;
+      width: 80px;
+
+    }
+    #player #right .volume .kj{
+      width: 20px;
+      height: 25px;
+      display: flex;
+    }
+    #player #right .volume .kj .volume-on{
+     margin: auto;
+      width: 12px;
+      height: 12px;
+      background: url(img/icon.png) no-repeat;
+      background-position:0 -34px;
+    }
+    #player #right .volume .kj.active{
+      background: url(img/icon.png) no-repeat;
+     background-position: 0 -46px;
+    }
+    #player #right .volume .vp{
+      position: relative;
+    }
+    #player #right .volume .vp .volume-progress{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 60px;
+      height: 3px;
+      background: #737373;
+
+    }
+    #player #right .volume  .vp .volume-sliderBar{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 9px;
+      height: 7px;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    #player #right .volume .vp .volume-progress-pink{
+      width: 0;
+      background: deeppink;
+
+    }
+    #player #right .fullscreen{
+     height: 25px;
+     width: 30px;
+      display: flex;
+
+
+    }
+
+    #player #right .fullscreen .fullscreen-on{
+      width: 11px;
+      height: 11px;
+      background: url(img/icon.png) no-repeat;
+      background-position: 0 -58px;
+      margin: auto;
+    }
+    #player #right .fullscreen .fullscreen-on.active{
+      background-position: 0 -70px
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="player">
+  <video src="http://img.ksbbs.com/asset/Mon_1703/eb048d7839442d0.mp4" id="video"></video>
+
+<div id="tes">
+  <div id="left">
+    <div class="start-btn"></div>
+    <div class="end-btn"></div>
+  </div>
+
+  <div id="progress">
+    <div class="progress-gray"></div>
+    <div class="sliderBar"></div>
+    <div class="progress-gray progress-pink"></div>
+  </div>
+
+  <div id="right">
+    <div class="time">
+      <span>00:00:00</span>
+      /
+      <span>00:03:58</span>
+    </div>
+    <div class="volume">
+        <div class="kj"><div class="volume-on"></div></div>
+      <div class="vp">
+        <div class="volume-progress"></div>
+        <div class="volume-sliderBar"></div>
+        <div class="volume-progress volume-progress-pink"></div>
+      </div>
+    </div>
+    <div class="fullscreen">
+      <div class="fullscreen-on"></div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+</body>
+<script>
+  window.onload=function () {
+
+
+
+
+
+  }
+</script>
+</html>

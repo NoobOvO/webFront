@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阻止click双击动作</title>
+  <style>
+    html,body,#app{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+   *{
+      margin: 0;
+      padding: 0;
+    }
+    .wrap{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(0,0,0,.5);
+
+    }
+    .box{
+     margin: 100px auto;
+      background-color: #fffdef;
+      text-align: center;
+      padding: 20px;
+      width: 200px;
+
+
+
+    }
+
+    .box button{
+      background-color: #333333;
+      margin: 20px 0 ;
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+    }
+    .ah{
+
+      margin-top: 160px;
+    }
+     .ah a{
+       font-size: 20px;
+     }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="ah">
+    <a href="https://www.baidu.com">遇事不决,就百度</a>
+    <a href="https://www.baidu.com">遇事不决,就百度</a>
+    <a href="https://www.baidu.com">遇事不决,就百度</a>
+    <a href="https://www.baidu.com">遇事不决,就百度</a>
+    <a href="https://www.baidu.com">遇事不决,就百度</a>
+    <a href="https://www.baidu.com">遇事不决,就百度</a>
+    <a href="https://www.baidu.com">遇事不决,就百度</a>
+    <a href="https://www.baidu.com">遇事不决,就百度</a>
+    <a href="https://www.baidu.com">遇事不决,就百度</a>
+  </div>
+
+  <div class="wrap">
+    <div class="box">
+      <p>操作成功!</p>
+      <button>关闭</button>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+</body>
+<script>
+  window.onload=function () {
+    var button=  document.querySelector(".box button");
+    var wrap=  document.querySelector(".wrap");
+  var app=  document.querySelector("#app");
+    app.addEventListener("touchstart",function (ev) {
+      ev.preventDefault();
+    })
+
+    button.ontouchstart=function (ev) {
+      wrap.style.display="none";
+    }
+
+
+  }
+
+</script>
+</html>
+

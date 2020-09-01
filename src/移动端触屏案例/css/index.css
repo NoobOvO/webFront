@@ -1,0 +1,39 @@
+#app .banners{
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+#app .banners .banners-items{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+}
+#app .banners .banners-items li{
+  list-style: none;
+}
+#app .banners .banners-items li a img{
+  width: 100%;
+}
+
+.pagination{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  text-align: center;
+  font-size: 0;
+}
+.pagination span{
+  margin: 0 3px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cccccc;
+}
+.pagination span.active{
+  background-color: deeppink;
+}

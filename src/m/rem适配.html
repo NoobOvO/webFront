@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REM</title>
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+   html,body,#app{
+     width: 100%;
+     overflow: hidden;
+   }
+
+    body{
+      font: 16px "Microsoft Himalaya";
+    }
+    .box{
+      width: 3.75rem;
+      height: 3rem;
+      background-color: lime;
+    }
+
+    @media (min-width: 320px) {
+      html{
+        font-size: 85.33px;
+      }
+    }
+    @media (min-width: 375px) {
+      html{
+        font-size: 100px;
+      }
+    }
+    @media (min-width: 400px) {
+      html{
+        font-size: 106.66px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<!-- 移动端适配 有2种 第1种是viewport适配 就是修改inistial-scale 通过当前屏幕宽/设计稿宽度 缺点是 有些设备可能会出现问题 图片会失真 现在用的人少  -->
+
+<!--第2种 就是rem适配 首先先了解一下什么是rem 什么是em 一个是根字体大小 一个是默认字体大小 思路出奇,将根元素字体变成100px,rem再除以100,方便适配-->
+
+<div id="app">
+  <div class="box">
+    你好啊
+  </div>
+</div>
+</body>
+</html>

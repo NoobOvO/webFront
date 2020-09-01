@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>em和rem</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 12px;
+    }
+    #app{
+     font-size: 20px;
+    }
+    .box1{
+      width: 20em;
+      height: 20em;
+      background-color: #EC4137;
+    }
+    .box2{
+      margin-top: 2rem;
+      width: 20rem;
+      height: 20rem;
+      background-color: lime;
+    }
+
+  </style>
+</head>
+<body>
+<!-- em大小为当前默认字体大小,可继承父类元素,chrome默认为16px-->
+<!-- rem大小为根(root)元素 也就是html的字体大小 可以更改-->
+<div id="app">
+  <div class="box1"></div>
+  <div class="box2"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>长得贼抽象</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      background-color: #0b15ef;
+    }
+
+  </style>
+</head>
+<body>
+ <div class="box"></div>
+</body>
+<script>
+  window.onload=function () {
+       var box=  document.querySelector(".box");
+         transformCSS(box,"scale",3);
+  }
+
+  function transformCSS(node,prop,value) {
+    if(arguments.length>2){  //这个地方我踩坑惹 。。。
+      //给元素设置值
+      if(node.transformData === undefined){      //如果没有就创建一个
+        node.transformData={};
+      }
+      //把value赋给tranformData的属性种
+      node.transformData[prop]=value;
+
+      //遍历transformData
+       var result='';
+      for(var  i in node.transformData){
+            switch (i) {
+              case "translate":
+              case "translateX":
+              case "translateY":
+                 result += i + "("+node.transformData[i]+"px) ";
+                 break;
+              case "scale":
+              case "scaleY":
+              case "scaleX":
+                result += i + "("+node.transformData[i]+") ";
+                break;
+              case "rotate":
+              case "skew":
+              case "skewX":
+              case "skewY":
+                result += i + "("+node.transformData[i]+"deg) ";
+                break;
+            }
+      }
+      node.style.transform=result;
+    }else {
+      //读取数据 返回值
+      //如果没有value 给个默认值
+        if(node.transformData === undefined){
+          if(prop=="scale"||prop=="scaleY"||prop=="scaleX"){
+            var value=1;
+          }else {
+            var value=0;
+          }
+        }else {
+          var value=node.transformData[prop];
+        }
+        return value;
+
+
+    }
+
+
+
+
+
+
+
+  }
+
+
+
+
+</script>
+</html>

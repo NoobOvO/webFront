@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit:cover">
+  <title>触摸拖动</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body,html,#app{
+      width: 100%;
+      height: 100%;
+    }
+    #app .banners{
+      width: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+    }
+    #app .banners .banners-items{
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+    }
+    #app .banners .banners-items li{
+      list-style: none;
+    }
+    #app .banners .banners-items li a img{
+      width: 100%;
+    }
+
+    #app .banners .dots{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 8px;
+      text-align: center;
+      font-size: 0;
+    }
+    #app .banners .dots span{
+      margin: 0 3px;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #cccccc;
+    }
+    #app .banners .dots span.active{
+      background-color: deeppink;
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="banners">
+    <ul class="banners-items">
+      <li><a href="javascript:"><img src="img/1.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/2.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/3.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/4.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/5.jpg"></a></li>
+    </ul>
+    <div class="dots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+<script>
+  window.onload=function () {
+    //动态变化轮播图区域长度
+    var app=   document.querySelector("#app");
+    var banners=  document.querySelector(".banners"); //子元素设置定位后 包裹元素没有内容撑开 需要给他个高度 图片加载完设置高度
+    var bannersitemsLi=document.querySelectorAll(".banners-items li");
+    var bannersitems=document.querySelector(".banners-items");
+    var index=0; //切换轮播图的索引
+    var spandots =document.querySelectorAll(".dots span");
+
+
+
+    bannersitems.style.width=bannersitemsLi.length*100+"%";
+    bannersitemsLi.forEach(function (item) {
+      item.style.width=100/bannersitemsLi.length+"%";
+    })
+    banners.style.height=bannersitemsLi[0].offsetHeight+"px";
+
+
+    //滑动
+    banners.addEventListener("touchstart",function(ev) {
+      var touch=  ev.changedTouches[0];
+      this.startX=touch.clientX; //开始滑动
+      this.cleX=bannersitems.offsetLeft;//开始位置
+      ev.preventDefault();
+
+    })
+
+    banners.addEventListener("touchmove",function(ev) {
+      var touch= ev.targetTouches[0];
+      var endX=touch.clientX; //开始滑动
+      this.allX= endX-this.startX; //滑动的距离
+      var maxX=this.cleX+this.allX;
+
+      bannersitems.style.left=maxX+"px"; //滑动的状态
+
+    })
+
+    //切换  轮播图的切换  我认为一样适用于PC端 给全局一个index 然后改变大包含块的left值
+    banners.addEventListener("touchend",function (ev) {
+      if(this.allX<0){
+        //向左划 下一张
+        index++;
+      }else if(this.allX>0){
+        //向右滑 上一张
+        index--;
+      }
+      //index范围判断
+      if(index<0){
+        index=0;
+      }
+      if(index>bannersitemsLi.length-1){
+        index=bannersitemsLi.length-1;
+      }
+      //轮播图的位置
+      setBannersIndex(index);
+
+
+    })
+
+
+
+    //轮播图的具体位置  active的高亮
+  function setBannersIndex(current) {
+    bannersitems.style.left=-bannersitemsLi[0].clientWidth*current+"px";
+    spandots.forEach(function (item) {
+      item.classList.remove("active");
+    });
+    spandots[current].classList.add("active");
+  }
+
+
+  }
+</script>
+</html>
+

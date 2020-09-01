@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>触摸滑动</title>
+  <style>
+    html,body,#app{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .content{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background-color: #000;
+      color: #fffdef;
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <div class="content"></div>
+
+
+
+</div>
+
+
+</body>
+<script>
+  window.onload=function () {
+    var content=  document.querySelector(".content");
+    var app=  document.querySelector("#app");
+    var html="";
+    for (let i = 0; i <100 ; i++) {
+      content.innerHTML+=html+i+"<br>"
+    }
+     //我建议滑着走
+    var startY;
+    content.addEventListener("touchstart",function (ev) {
+       var finger= ev.changedTouches[0];
+       startY= finger.clientY;
+
+      content.cleY=content.offsetTop;  //定死它的初始位置
+    })
+    content.addEventListener("touchmove",function (ev) {
+      var finger= ev.changedTouches[0];
+
+      var nowY= finger.clientY-startY;
+        console.log(nowY);
+
+     // content.style.top=content.offsetHeight+nowY+"px";   错误示范 为啥?  因为move事件，你没移动一点，它都会重新动态获取高度，造成你移动一点移动到天上
+
+      //范围限制
+
+      var sumY= content.cleY+nowY;
+      if(sumY>0){
+           sumY=0; //最大值 不能再向下滑动
+      }else if(sumY<-(content.clientHeight-window.innerHeight)){
+           sumY=-(content.clientHeight-window.innerHeight); //最小值 不能再往上滑动
+      }
+      content.style.top= sumY + "px"; //改变top
+    })
+
+
+
+  }
+
+</script>
+</html>
+
+
+

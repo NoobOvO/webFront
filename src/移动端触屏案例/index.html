@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit:cover">
+  <title>触摸拖动</title>
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body,html,#app{
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="mySwiper">
+    <ul class="banners-items">
+      <li><a href="javascript:"><img src="img/1.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/2.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/3.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/4.jpg"></a></li>
+      <li><a href="javascript:"><img src="img/5.jpg"></a></li>
+    </ul>
+     <div class="icon">
+     </div>
+  </div>
+  <img src="img/content.png" style="width: 100%;margin-top: 20px">
+
+</div>
+
+</body>
+<!--导入插件-->
+<script src="js/swiper.js"></script>
+<script>
+   //插件的格式一般是 函数名({}) 里面写属性
+   (function () {
+     swiper({
+       ele:document.querySelector(".mySwiper"),
+       pagination:document.querySelector(".icon"),
+       isAutoplay:true,
+       delay:2000
+     })
+
+
+
+
+   })()
+
+
+</script>
+</html>
+
+

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>自定义</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    html,body{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #player{
+      background-color: #383838;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #player #video{
+      flex: auto;
+      height: 300px;
+
+    }
+    /*进度条*/
+    #player  #content{
+      height: 25px;
+      background-color: #2A2A2A;
+      flex: none;
+      display: flex;
+
+    }
+    #player  #content #left-content{
+      width: 55px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+    }
+    #player  #content #left-content .start-btn{
+      position: absolute;
+      left: 8px;
+      width: 9px;
+      height: 11px;
+      background: url("img/icon.png") no-repeat;
+      background-position: 0 -22px;
+
+
+    }
+    #player  #content  #left-content .start-btn.active{
+      position: absolute;
+      left: 8px;
+      width: 9px;
+      height: 11px;
+      background: url("img/icon.png") no-repeat;
+      background-position: 0 -11px;
+
+
+    }
+    #player  #content #left-content .stop-btn{
+      position: absolute;
+      right: 8px;
+      width: 9px;
+      height: 11px;
+      background: url("img/icon.png") no-repeat;
+      background-position: 0 0;
+
+
+    }
+    #player  #content  #scroller-content{
+      width: 100%;
+      flex: auto;
+      position: relative;
+      display: flex;
+
+
+    }
+    #player  #content  #scroller-content .scroller{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: 3px;
+      background-color: #737373;
+
+    }
+    #player  #content  #scroller-content .scroller-buss{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      width: 9px;
+      height: 7px;
+      background-color: white;
+      border-radius: 2px;
+
+    }
+    #player  #content  #scroller-content .scroller-pink{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      height: 3px;
+      width:0;
+      background-color: deeppink;
+    }
+
+    #player  #content #right-content{
+      position: relative;
+      width: 230px;
+      height: 25px;
+      display: flex;
+
+
+    }
+    #player  #content #right-content .time{
+      width: 120px;
+      height: 25px;
+      font-size: 12px;
+      color: white;
+      text-align: center;
+      line-height: 25px;
+
+    }
+
+    #player  #content #right-content .volume-btn{
+      margin-bottom: auto;
+      margin-top: auto;
+      width: 12px;
+      height: 12px;
+      background: url(img/icon.png) no-repeat;
+      background-position:0 -34px;
+
+    }
+    #player  #content #right-content .volume-btn.active{
+      background-position: 0 -46px;
+    }
+    #player  #content #right-content #volume-scroller{
+      position: relative;
+      width: 60px;
+      height: 25px;
+
+    }
+    #player  #content #right-content #volume-scroller .scroller{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: 3px;
+      background-color: #737373;
+
+    }
+    #player  #content #right-content #volume-scroller .scroller-buss{
+      position: absolute;
+      top: 0;
+      left: 51px;
+      bottom: 0;
+      margin: auto;
+      width: 9px;
+      height: 7px;
+      background-color: white;
+      border-radius: 2px;
+      z-index: 1;
+
+    }
+    #player  #content #right-content #volume-scroller .scroller-pink{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      height: 3px;
+      width:60px;
+      background-color: deeppink;
+
+
+    }
+    #player  #content #right-content .fullscreen{
+      width: 30px;
+      display: flex;
+    }
+    #player  #content #right-content .fullscreen .fullscreen-btn{
+      width: 11px;
+      height: 11px;
+      margin: auto;
+      background: url(img/icon.png) no-repeat;
+      background-position: 0 -58px;
+
+
+    }
+    #player  #content #right-content .fullscreen .fullscreen-btn.active{
+      background-position: 0 -70px;
+    }
+
+  </style>
+</head>
+<body>
+<div id="player">
+  <video src="http://img.ksbbs.com/asset/Mon_1703/eb048d7839442d0.mp4" id="video"></video>
+  <div id="content">
+    <div id="left-content">
+      <div class="start-btn"></div>
+      <div class="stop-btn"></div>
+    </div>
+    <div id="scroller-content">
+      <div class="scroller"></div>
+      <div class="scroller-buss"></div>
+      <div class="scroller-pink"></div>
+    </div>
+    <div id="right-content">
+      <div class="time">
+        <span class="now">00:00:00</span>
+        /
+        <span class="end">00:00:00</span>
+      </div>
+      <div class="volume-btn"></div>
+      <div id="volume-scroller">
+        <div class="scroller"></div>
+        <div class="scroller-buss"></div>
+        <div class="scroller-pink"></div>
+      </div>
+      <div class="fullscreen">
+        <div class="fullscreen-btn"></div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+</body>
+<script>
+  window.onload=function () {
+  var video =  document.querySelector("#video"); //视频
+   var startBtn= document.querySelector(".start-btn");
+   var  stopBtn= document.querySelector(".stop-btn");
+     //滑块进度条
+  var scroller =  document.querySelector(".scroller"); //灰色进度条
+   var scrollerBuss= document.querySelector(".scroller-buss"); //滑块
+   var scrollerPink = document.querySelector(".scroller-pink"); //粉色进度条
+    var scrollerContent=document.querySelector("#scroller-content");
+  var timeContent =  document.querySelector(".time");
+   var now= document.querySelector(".time .now");//左边的时间
+    var end= document.querySelector(".time .end");//右边的时间
+
+
+    //点击播放按钮 样式变
+    var flag=false;//默认暂停
+   startBtn.onclick=function (ev) {
+     //播放 和 暂停
+     if(!flag){
+       video.play();
+       end.innerText=getTimeHa(video.duration);
+       startBtn.classList.add("active");
+     }else {
+       video.pause();
+       startBtn.classList.remove("active");
+     }
+     flag=!flag;
+   }
+   //停止播放
+    stopBtn.onclick=StopBOF;
+   //滑动滑块 进度条
+    scrollerBuss.onmousedown=function (ev) {
+     ev.preventDefault();
+     var startX=  ev.clientX-scrollerBuss.offsetLeft;
+
+
+
+      scrollerContent.onmousemove=function (ev) {
+        var   nowX=  ev.clientX-startX;
+        if(nowX<0){
+          nowX=0;
+        }else if(nowX>scroller.clientWidth-scrollerBuss.offsetWidth) {
+          nowX=scroller.clientWidth-scrollerBuss.offsetWidth;
+        }
+
+        scrollerBuss.style.left=scrollerPink.style.width=nowX+"px";
+        //播放进度条
+        var summer=scroller.clientWidth-scrollerBuss.offsetWidth;//大条
+         var  currenTime =  (nowX/summer)*video.duration;
+         video.currentTime=currenTime;
+         if(video.currentTime==video.duration){
+           StopBOF();
+         }
+
+
+
+      }
+
+
+      document.onmouseup = function (ev) {
+        scrollerContent.onmousemove=null;
+      }
+
+    }
+
+//滑块自己动
+    function selfMove() {
+//这个时间监听距离 可进可退
+        video.ontimeupdate=function (ev) {
+        //获取当前进度
+      var scale   = video.currentTime/video.duration;
+        var currentMeter=  (scroller.clientWidth-scrollerBuss.offsetWidth)*scale;
+          scrollerBuss.style.left=scrollerPink.style.width=currentMeter+"px";
+        now.innerHTML=getTimeHa(video.currentTime);
+        }
+    }
+    selfMove();
+
+
+
+//点进度条 响应当前时间的视频
+    function clickScroller() {
+      scrollerContent.onclick=function (ev) {
+        var nowX=ev.clientX-scrollerBuss.offsetWidth/2-scrollerContent.offsetLeft;
+        scrollerBuss.style.left=scrollerPink.style.width=nowX+"px";
+        //播放进度条
+        var summer=scroller.clientWidth-scrollerBuss.offsetWidth;//大条
+        var  currenTime =  (nowX/summer)*video.duration;
+        video.currentTime=currenTime;
+      }
+
+
+    }
+    clickScroller();
+
+
+//算时间
+     function getTimeHa(timer) {
+       var time=parseInt(timer);
+       time = parseInt(time);
+       var h=toZero(Math.floor(time/3600));
+       var m=toZero(Math.floor(time%3600/60));
+       var s=toZero(Math.floor(time%60));
+       return h+":"+m+":"+s;
+     }
+     function toZero(num) {
+       if(num<10){
+         num="0"+num;
+       }else{
+         num=""+num;
+       }
+       return num;
+     }
+
+//停止播放函数
+    function StopBOF() {
+      video.currentTime=0;
+      video.pause();
+      flag=false; //不控制flag,点击按钮会不好使
+      scrollerPink.style.width=0;
+      scrollerBuss.style.left=0;
+      startBtn.classList.remove("active");
+      end.innerText=getTimeHa(0);
+    }
+//声音
+    var volumBtn= document.querySelector(".volume-btn");
+    var volumeScroller=  document.querySelector("#volume-scroller");//声音图标右边的总体区域
+    var  voGray=  document.querySelector("#volume-scroller .scroller");
+    var  voBuss=   document.querySelector("#volume-scroller .scroller-buss");
+    var   voPink=   document.querySelector("#volume-scroller .scroller-pink");
+    var rt=document.querySelector("#right-content");
+
+
+    function voOn() {
+       var vo=false;
+      volumBtn.onclick=function () {
+        if(!vo){
+          volumBtn.classList.add("active");
+          video.volume=0;
+        }else {
+          volumBtn.classList.remove("active");
+          video.volume=1;
+        }
+        vo=!vo;
+      }
+
+    }
+    voOn();
+  //声音的滚动事件
+     function voSroll() {
+     voBuss.onmousedown=function (ev) {
+         ev.preventDefault();
+       var  startX= ev.clientX-voBuss.offsetLeft;
+
+
+       volumeScroller.onmousemove=function (ev) {
+              var nowX= ev.clientX-startX;
+              if(nowX<0){
+                nowX=0;
+              }else if(nowX>voGray.clientWidth-voBuss.offsetWidth){
+                nowX=voGray.clientWidth-voBuss.offsetWidth;
+              }
+         voPink.style.width=voBuss.style.left=nowX+"px";
+              //当前音量
+           video.volume=nowX/(voGray.clientWidth-voBuss.offsetWidth);
+
+       }
+       document.onmouseup=function (ev) {
+         volumeScroller.onmousemove=null;
+       }
+
+
+     }
+
+     }
+    voSroll()
+    //随意切换音量
+    function changeVolumn() {
+
+      volumeScroller.onclick=function (ev) {
+        var normalX=ev.clientX-voBuss.offsetWidth/2-rt.offsetLeft-volumeScroller.offsetLeft;
+        console.log(normalX);
+        if(normalX<0){
+          normalX=0;
+        }else if(normalX>voGray.clientWidth-voBuss.offsetWidth){
+          normalX=voGray.clientWidth-voBuss.offsetWidth;
+        }
+        voPink.style.width=voBuss.style.left=normalX+"px";
+        //当前音量
+        video.volume=normalX/(voGray.clientWidth-voBuss.offsetWidth);
+      }
+    }
+    changeVolumn();
+     //全屏
+     var fscr= document.querySelector(".fullscreen");//包裹元素
+     var fullBtn=document.querySelector(".fullscreen-btn");//按钮
+
+    //按钮变形 全屏
+    var full=false; //当前不是全屏
+    fullBtn.onclick=function (ev) {
+
+     if(!full){
+       fullBtn.classList.add("active");
+       var docElm = document.documentElement;
+       //W3C
+       if (docElm.requestFullscreen) {
+         docElm.requestFullscreen();
+       }
+       //FireFox
+       else if (docElm.mozRequestFullScreen) {
+         docElm.mozRequestFullScreen();
+       }
+       //Chrome等
+       else if (docElm.webkitRequestFullScreen) {
+         docElm.webkitRequestFullScreen();
+       }
+       //IE11
+       else if (docElm.msRequestFullscreen) {
+         docElm.msRequestFullscreen();
+       }
+
+
+
+     }else {
+       if (document.exitFullscreen) {
+         document.exitFullscreen();
+       }
+       else if (document.mozCancelFullScreen) {
+         document.mozCancelFullScreen();
+       }
+       else if (document.webkitCancelFullScreen) {
+         document.webkitCancelFullScreen();
+       }
+       else if (document.msExitFullscreen) {
+         document.msExitFullscreen();
+       }
+
+
+       fullBtn.classList.remove("active");
+     }
+     full=!full;
+
+    }
+
+
+
+
+
+
+
+  }
+
+
+
+
+</script>
+</html>
+
