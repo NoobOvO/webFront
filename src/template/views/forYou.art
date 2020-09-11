@@ -1,0 +1,6 @@
+
+{{ include "../common/header.art"}}
+<% include("../common/header.art") %>
+<p>hello world</p>
+<% include("../common/footer.art") %>
+{{ include "../common/footer.art"}}

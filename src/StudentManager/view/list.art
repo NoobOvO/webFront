@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    td{
+      text-align: center;
+      font-weight: bolder;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h3 style="text-align: center;font-weight: bolder">学员信息</h3>
+  <table class="table table-bordered">
+    <tr>
+      <td>姓名</td>
+      <td>年龄</td>
+      <td>性别</td>
+      <td>邮箱地址</td>
+      <td>爱好</td>
+      <td>所属学院</td>
+      <td>入学时间</td>
+    </tr>
+    {{each students }}
+    <tr>
+      <td>{{$value.name}}</td>
+      <td>{{$value.age}}</td>
+      <td>{{$value.sex==0  ?  "男" : "女"}}</td>
+      <td>{{$value.email}}</td>
+      <td>{{each $value.hobbies}}
+      {{$value}}
+      {{/each}}
+      </td>
+      <td>{{$value.college}}</td>
+      <td>{{dateformat($value.joinTime,"yyyy-mm-dd")}}</td>
+    </tr>
+    {{/each }}
+
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+
+//异步函数
+async function ft() {
+  throw "出错惹";
+  return "你好啊";
+}
+
+ft().then(data=>{
+  console.log(data);
+}).catch(err=>{
+  console.log(err);
+});

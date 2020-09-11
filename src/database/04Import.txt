@@ -1,0 +1,5 @@
+mongoimport -d playground -c users --jsonArray --file .\users.json
+
+mongoimport -d playground -c users --file .\users.json
+
+-d数据库 -c集合 --file所属当前文件

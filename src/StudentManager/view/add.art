@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+
+<div class="container">
+  <h3 style="text-align: center">学生档案</h3>
+  <form  action="/add" method="post"   >
+    <div class="form-group">
+      <label >姓名</label>
+      <input type="text"  name="name" class="form-control" placeholder="请输入姓名">
+    </div>
+    <div class="form-group">
+      <label >年龄</label>
+      <input type="text" name="age" class="form-control" placeholder="请输入年龄">
+    </div>
+    <div class="checkbox">
+      <label style="margin-left: -20px">
+        <span style="font-weight: bolder">性别</span>&nbsp&nbsp&nbsp
+        <input type="radio" value="0" name="sex">男 &nbsp&nbsp
+        <input type="radio" value="1" name="sex">女
+      </label>
+    </div>
+    <div class="form-group">
+      <label >邮箱地址</label>
+      <input type="text" class="form-control" placeholder="请输入邮箱" name="email">
+    </div>
+    <div class="checkbox">
+      <label style="margin-left: -20px">
+        <span style="font-weight: bolder">爱好</span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="checkbox" value="敲代码" name="hobbies" >敲代码 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="checkbox" value="篮球" name="hobbies" >篮球 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="checkbox" value="睡觉" name="hobbies" >睡觉 &nbsp&nbsp&nbsp
+      </label>
+    </div>
+    <div class="form-group">
+      <label >所属学院</label>
+    <select class="form-control" name="college" >
+      <option value="前端与移动开发">前端与移动开发</option>
+      <option value="Java" >Java</option>
+      <option value="PHP" >PHP</option>
+      <option value="C#" >C#</option>
+      <option value="C++">C++</option>
+    </select>  </div>
+    <div class="form-group">
+      <label>入学日期</label>
+      <input type="date" class="form-control" name="joinTime" >
+    </div>
+    <button type="submit" class="btn btn-danger">添加学生</button>
+  </form>
+</div>
+
+</body>
+</html>

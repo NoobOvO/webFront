@@ -104,6 +104,36 @@ gulp.task('copy:main.css', () => {
     .pipe(gulp.dest(`${dirs.dist}/css`));
 });
 
+gulp.task("first",function (done) {
+  console.log("人生中第一次的gulp任务执行惹!");
+  gulp.src("./src/hello1/hh1.png").pipe(gulp.dest("./dist/helloword"));
+  done();
+});
+const htmlmin=require("./node_modules/gulp-htmlmin");
+//压缩
+gulp.task("htmlmin",(done)=>{
+  console.log("压缩成功");
+  gulp.src("./src/jdg/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("./dist/htmlmin"));
+     done();
+});
+const less=require("./node_modules/gulp-less");
+const csso=require("./node_modules/gulp-csso");
+gulp.task("csson",(done)=>{
+  gulp.src("./src/h5QAQ/LESS/css/*.less")
+    //转换成CSS
+    .pipe(less())
+    //压缩CSS代码
+    .pipe(csso())
+    .pipe(gulp.dest("./dist/csso"));
+  done();
+});
+
+
+
+
+
 gulp.task('copy:misc', () =>
   gulp.src([
     // Copy all files

@@ -1,0 +1,57 @@
+[{
+  "name": "xiaoming",
+  "age": 18,
+  "hobbies": ["篮球","排球","网上冲浪"],
+  "password":"123456",
+  "email": "youtoBi@126.com"
+},
+  {
+    "name": "bat",
+    "age": 20,
+    "hobbies": ["篮球","排球","网上冲浪","瑜伽"],
+    "password":"123456",
+    "email": "youtoBi@136.com"
+  },
+  {
+    "name": "Liu",
+    "age": 16,
+    "hobbies": ["篮球","排球"],
+    "password":"123456",
+    "email": "youtoUOBi@126.com"
+  },
+  {
+    "name": "Chen",
+    "age": 18,
+    "hobbies": ["完美的铲球"],
+    "password":"123456",
+    "email": "youtoBi@126.com"
+  },
+  {
+    "name": "Google",
+    "age": 28,
+    "hobbies": ["篮球","排球","网上冲浪"],
+    "password":"123456",
+    "email": "youtoBi@126.com"
+  },
+  {
+    "name": "Uzi",
+    "age": 20,
+    "hobbies": ["篮球","排球","网上冲浪","竞选总统"],
+    "password":"123456",
+    "email": "youtoBi@126.com"
+  },
+  {
+    "name": "Moon",
+    "age": 27,
+    "hobbies": ["篮球","排球","网上冲浪","对线射击"],
+    "password":"123456",
+    "email": "youtoBi@126.com"
+  },
+  {
+    "name": "Tree",
+    "age": 20,
+    "hobbies": ["篮球","排球"],
+    "password":"123456",
+    "email": "ChiGaGo@126.com"
+  }
+]

@@ -1,0 +1,7 @@
+const express=require("express");
+const  app=express();
+//Express路由参数 restful风格
+app.get("/index/:id/:name/:age",(req,rsp)=>{
+  rsp.send(req.params);
+});
+app.listen(80);

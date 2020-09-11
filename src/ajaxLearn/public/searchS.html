@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <style>
+    .container{
+      padding-top: 150px;
+    }
+    .list-group{
+      display: none;
+    }
+
+
+  </style>
+</head>
+<body>
+<!--搜索框自动提示下拉内容-->
+<div class="container">
+  <div class="form-group">
+    <input class="form-control"  type="text" placeholder="请输入搜索内容"  name="key" id="key"/>
+    <ul class="list-group">
+    </ul>
+  </div>
+</div>
+
+</body>
+<script src="ajax.js"></script>
+<script src="template-web.js"></script>
+<script type="text/html" id="tcl">
+  {{each result}}
+<li class="list-group-item">{{$value}}</li>
+  {{/each}}
+</script>
+<script>
+      let key=document.querySelector("#key");
+      let list=document.querySelector(".list-group");
+      let timer=null;
+      key.oninput=function () {
+           clearTimeout(timer);
+        let va= this.value;
+
+       if(va.trim().length==0){
+         list.style.display="none";
+         return;
+       }
+
+
+       timer= setTimeout(function () {
+          ajax({
+            method:"get",
+            data:{key:va},
+            url:"http://localhost/search",
+            success:function (result) {
+              let newArray=  eval('('+result+')'); //字符串转数组对象
+              let html=template("tcl",{result:newArray});
+              list.innerHTML=html;
+              list.style.display="block";
+            }
+          });
+        },800)
+
+
+
+
+
+      }
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同源跨域政策</title>
+</head>
+<body>
+<form id="form">
+  <input type="button" value="请点击我" id="btn"/>
+</form>
+</body>
+<script src="ajax.js"></script>
+<script>
+ let btn= document.querySelector("#btn");
+ //CORS解决跨域问题与jsonp的不同在于 可以使用ajax 改变响应头的设置即可
+ //CORS:Cross-origin-resource-sharing 跨域资源共享
+ //跨域的三种方式 1.JSONP(不能使用ajax,利用script标签) 2.CORS(可以使用ajax,在跨域的服务器进行拦截并设置响应头参数)
+ //3. 服务端处理政策(服务端与服务端之间不存在跨域的问题,只有同源,如何访问不同的服务器?)
+ //npm install request   request("第二台服务器的请求地址",(err,response,body)=>{rsp.send(body)});
+  btn.onclick=function () {
+    ajax({
+      method:'get',
+      url:"http://localhost:3000/cors",
+      success:function (result) {
+        console.log(result);
+      }
+    })
+  }
+</script>
+</html>

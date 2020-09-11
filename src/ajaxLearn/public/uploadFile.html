@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+  <style>
+      .father-bar{
+        width: 1000px;
+        height: 20px;
+        border: 1px #ccc solid;
+
+      }
+    .bar{
+      height: 100%;
+      background-color: #0b15ef;
+    }
+  </style>
+</head>
+<body>
+<form id="form">
+  <input type="file" id="file">
+</form>
+<div  class="imgContain">
+
+</div>
+<div class="father-bar" >
+  <div class="bar" style="width:0"></div>
+</div>
+</body>
+<script>
+  //思路:  给文件控件绑上onchange事件 formData追加文件 用xhr发送formData  这样就传给了服务端 服务端用formidata接受 设置绝对路径 设置有后缀名
+   let form= document.querySelector("#form");
+   let file=document.querySelector("#file");
+   let bar=document.querySelector(".bar");
+   let imgc=document.querySelector(".imgContain");
+   file.onchange=function () {
+     let formData=new FormData();
+     //上传文件  文件默认是数组
+     formData.append("fileupload",this.files[0]);
+     let xhr =new XMLHttpRequest();
+     xhr.open("post","http://localhost/upload");
+     //文件上传进度条
+     xhr.upload.onprogress=function(ev){
+        let rs= (ev.loaded/ev.total)*100;
+        bar.style.width=rs+"%";
+        bar.innerHTML=rs+"%";
+     };
+     xhr.send(formData);
+     xhr.onload=function () {
+       if(xhr.status==200){
+       //上传图片后 加载图片
+         //思路 把服务端静态资源路径给客户端 在把路径赋值给图片
+       let img= document.createElement("img");
+       img.src=xhr.responseText;//来自服务端提供的地址
+         img.onload=function () {
+           imgc.appendChild(img);//DIV追加img图片
+         }
+       }
+     }
+  }
+</script>
+</html>

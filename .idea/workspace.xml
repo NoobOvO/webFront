@@ -4,7 +4,15 @@
     <bookmark url="file://$PROJECT_DIR$/src/taobaodemo/css/index.css" line="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33a796be-b120-4e5f-a2fe-6a121cfec518" name="Default Changelist" comment="" />
+    <list default="true" id="33a796be-b120-4e5f-a2fe-6a121cfec518" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.babel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,49 +25,81 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/触摸滑动自动播放.html">
+        <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2001">
-              <caret line="173" column="34" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/快速滑动.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="91" column="74" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="800">
+              <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/js/swiper.js">
+        <entry file="file://$PROJECT_DIR$/src/ajaxLearn/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
+            <state relative-caret-position="1176">
+              <caret line="301" column="77" selection-start-line="301" selection-start-column="77" selection-end-line="301" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/loginDemo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/cors.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css3demo/flex页面练习/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/formData.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/uploadFile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/province3ji.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ajaxLearn/mongo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -78,6 +118,7 @@
     <findStrings>
       <find>banners</find>
       <find>dot</find>
+      <find>console</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -86,59 +127,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS条件判断/index.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS条件判断/css/index.less" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS导入/mixs.less" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS导入/variable.less" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS导入/index.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS导入/index.less" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS导入/shrink.css" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS嵌套/index.less" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS嵌套/index.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/LESS嵌套/map.less" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/canvas基础demo.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/再来一次拖拽.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条窗帘版.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条内容版.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条(滑块比例版).html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义滚动条/滚轮事件.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条(滚轮版).html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条over.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/CSSRESET/cssreset.css" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义播放器/学不会的源码/vicc.css" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义播放器/demo/再来一遍.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义播放器/demo/index.html" />
-        <option value="$PROJECT_DIR$/src/h5QAQ/自定义播放器/demo/功能Js.html" />
-        <option value="$PROJECT_DIR$/src/m/myscreen.html" />
-        <option value="$PROJECT_DIR$/src/m/触摸事件.html" />
-        <option value="$PROJECT_DIR$/src/m/点击穿透.html" />
-        <option value="$PROJECT_DIR$/src/m/浏览器的默认行为.html" />
-        <option value="$PROJECT_DIR$/src/m/手指触摸事件.html" />
-        <option value="$PROJECT_DIR$/src/m/触摸滑动初级版.html" />
-        <option value="$PROJECT_DIR$/src/m/em和rem.html" />
-        <option value="$PROJECT_DIR$/src/m/rem适配.html" />
-        <option value="$PROJECT_DIR$/src/m/rem适配JS实现方式.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/img/布局.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/布局.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/触摸滑动之切换.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/划到一半让它回来.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/划到一半让它回来02.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/过度效果.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/transform封装函数.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/触摸滑动transform封装版.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/js/transformCSS.js" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/无缝滚动.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/触摸滑动自动播放.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/快速滑动.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/触摸拖动.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/滑动触屏优化版.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/css/index.css" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/index.html" />
-        <option value="$PROJECT_DIR$/src/移动端触屏案例/js/swiper.js" />
-        <option value="$PROJECT_DIR$/src/GIT/hello.md" />
+        <option value="$PROJECT_DIR$/src/database/crud/model/index.js" />
+        <option value="$PROJECT_DIR$/src/template/app.js" />
+        <option value="$PROJECT_DIR$/src/template/views/index.art" />
+        <option value="$PROJECT_DIR$/src/template/forYou.art" />
+        <option value="$PROJECT_DIR$/src/template/love.js" />
+        <option value="$PROJECT_DIR$/src/template/common/footer.art" />
+        <option value="$PROJECT_DIR$/src/template/common/header.art" />
+        <option value="$PROJECT_DIR$/src/template/views/forYou.art" />
+        <option value="$PROJECT_DIR$/src/StudentManager/list.html" />
+        <option value="$PROJECT_DIR$/src/StudentManager/connect/connect.js" />
+        <option value="$PROJECT_DIR$/src/StudentManager/connect/user.js" />
+        <option value="$PROJECT_DIR$/src/StudentManager/route/router.js" />
+        <option value="$PROJECT_DIR$/src/StudentManager/route/index.js" />
+        <option value="$PROJECT_DIR$/src/StudentManager/view/main.js" />
+        <option value="$PROJECT_DIR$/src/StudentManager/public/css/haha.css" />
+        <option value="$PROJECT_DIR$/src/StudentManager/view/add.art" />
+        <option value="$PROJECT_DIR$/src/StudentManager/view/list.art" />
+        <option value="$PROJECT_DIR$/src/StudentManager/main.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/02.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/03.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/04.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/05.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/06.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/07.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/route/home.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/route/admin.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/08GetParams.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/moon.html" />
+        <option value="$PROJECT_DIR$/src/expressDemo/09PostParams" />
+        <option value="$PROJECT_DIR$/src/expressDemo/10RouterParams" />
+        <option value="$PROJECT_DIR$/src/expressDemo/11Static.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/12ArtTemplate.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/01.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/13AppLocals.js" />
+        <option value="$PROJECT_DIR$/src/expressDemo/views/list.art" />
+        <option value="$PROJECT_DIR$/src/expressDemo/views/hello.art" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/ajaxNoob.html" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/packageAjax.html" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/emailS.html" />
+        <option value="$PROJECT_DIR$/src/mongo.js" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/ajax.js" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/ajax02.js" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/searchS.html" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/province3ji.html" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/formData.html" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/uploadFile.html" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/cors.html" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/cors.html" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/mongo.js" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/public/loginDemo.html" />
+        <option value="$PROJECT_DIR$/src/ajaxLearn/app.js" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -169,6 +216,19 @@
               <item name="stromboy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="stromboy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stromboy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ajaxLearn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stromboy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stromboy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ajaxLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -180,6 +240,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -188,22 +249,22 @@
     <property name="node.js.selected.package.eslint" value="D:\stromboy\node_modules\eslint" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\stromboy\src\移动端触屏案例" />
-      <recent name="D:\stromboy\src\h5QAQ\响应式案例" />
-      <recent name="D:\stromboy\src\h5QAQ" />
-      <recent name="D:\stromboy\src\h5QAQ\JS" />
-      <recent name="D:\stromboy\src\h5QAQ\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\stromboy\src\移动端触屏案例\img" />
-      <recent name="D:\stromboy\src\h5QAQ\自定义播放器\demo\img" />
-      <recent name="D:\stromboy\src\h5QAQ\自定义播放器\学不会的源码" />
-      <recent name="D:\stromboy\src\h5QAQ\响应式练习\img" />
-      <recent name="D:\stromboy\src\h5QAQ" />
+      <recent name="D:\stromboy\src\ajaxLearn\public" />
+      <recent name="D:\stromboy\src\expressDemo\public\css" />
+      <recent name="D:\stromboy\src\StudentManager\public" />
+      <recent name="D:\stromboy\src\static\public" />
+      <recent name="D:\stromboy\src\server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\stromboy\src\ajaxLearn\public" />
+      <recent name="D:\stromboy\src\StudentManager" />
+      <recent name="D:\stromboy\src\StudentManager\view" />
+      <recent name="D:\stromboy\src\template\views" />
+      <recent name="D:\stromboy\src\template\common" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -249,15 +310,16 @@
       <workItem from="1597325469011" duration="149527000" />
       <workItem from="1598075341481" duration="115900000" />
       <workItem from="1598794478142" duration="9050000" />
-      <workItem from="1598853583663" duration="14645000" />
+      <workItem from="1598853583663" duration="16638000" />
+      <workItem from="1599042698141" duration="145762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="664810000" />
+    <option name="totallyTimeSpent" value="812565000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22523117" />
@@ -266,7 +328,7 @@
       <window_info id="npm" order="3" side_tool="true" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -281,14 +343,14 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22523117" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22523117" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -296,7 +358,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -306,343 +368,324 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/LESS嵌套/index.css">
+    <entry file="file://$PROJECT_DIR$/src/StudentManager/connect/connect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-351" />
+        <state relative-caret-position="75">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/LESS嵌套/map.css">
+    <entry file="file://$PROJECT_DIR$/src/StudentManager/connect/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StudentManager/view/list.art">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StudentManager/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/node/exportrequire/write.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/LESS嵌套/map.less">
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/05.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/route/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/route/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/moon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/08GetParams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/04.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/03.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/02.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/07.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/06.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/09PostParams">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/public/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/11Static.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/10RouterParams">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/01.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/canvas基础demo.html">
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/views/list.art">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="75">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DOM练习/拖拽/drag.html">
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/views/hello.art">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/template-web.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/13AppLocals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/03.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-197" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/04.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-375" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DOM练习/拖拽/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DOM练习/拖拽/js/drag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1650" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义滚动条/滚轮事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条内容版.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条(滑块比例版).html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1227">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hello1/08-外链CSS.html">
+    <entry file="file://$PROJECT_DIR$/src/database/02.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hello1/07-谷歌logo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/database/01.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条over.html">
+    <entry file="file://$PROJECT_DIR$/src/database/crud/list.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expressDemo/12ArtTemplate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2378">
-          <caret line="133" column="30" lean-forward="true" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+        <state relative-caret-position="100">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条(滚轮版).html">
+    <entry file="file://$PROJECT_DIR$/src/database/crud/mainC.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3800">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        <state relative-caret-position="121">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#h5#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条窗帘版.html">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/packageAjax.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="1251">
+          <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义滚动条/自定义滚动条.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/CSSRESET/cssreset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义播放器/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="217" column="7" lean-forward="true" selection-start-line="217" selection-start-column="7" selection-end-line="217" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义播放器/demo/再来一遍.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="228" column="10" lean-forward="true" selection-start-line="228" selection-start-column="10" selection-end-line="228" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义播放器/学不会的源码/vicc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1397">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义播放器/学不会的源码/vide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1481" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义播放器/demo/功能Js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11600">
-          <caret line="464" column="8" selection-start-line="464" selection-start-column="8" selection-end-line="464" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m/myscreen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/自定义播放器/demo/img/icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m/触摸事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m/点击穿透.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/h5QAQ/再来一次拖拽.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m/手指触摸事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m/em和rem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m/浏览器的默认行为.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1750">
-          <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m/rem适配JS实现方式.html">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/ajaxNoob.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/m/rem适配.html">
+    <entry file="file://$PROJECT_DIR$/src/mongo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-836">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state>
+          <caret selection-end-line="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/img/1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m/触摸滑动初级版.html">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/emailS.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+        <state relative-caret-position="103">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/触摸滑动之切换.html">
+    <entry file="file://$PROJECT_DIR$/src/database/07.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="122" column="28" lean-forward="true" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
+        <state relative-caret-position="750">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/无缝滚动.html">
+    <entry file="file://$PROJECT_DIR$/src/database/06.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="65" column="40" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        <state relative-caret-position="-1050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/ajax02.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1675">
+          <caret line="88" column="1" lean-forward="true" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/过度效果.html">
+    <entry file="file://$PROJECT_DIR$/src/database/05.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="128" column="9" lean-forward="true" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
+        <state relative-caret-position="50">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/布局.html">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/searchS.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="303">
+          <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/触摸滑动transform封装版.html">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/province3ji.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3650">
-          <caret line="146" column="7" selection-start-line="146" selection-start-column="7" selection-end-line="146" selection-end-column="7" />
+        <state relative-caret-position="175">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/transform封装函数.html">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/uploadFile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/触摸拖动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2375">
-          <caret line="95" column="36" lean-forward="true" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/滑动触屏优化版.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="600">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/划到一半让它回来02.html">
+    <entry file="file://$PROJECT_DIR$/src/css3demo/flex页面练习/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/formData.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="113" column="48" lean-forward="true" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
+        <state relative-caret-position="100">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/划到一半让它回来.html">
+    <entry file="file://$PROJECT_DIR$/src/jdg/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/cors.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="123" column="30" lean-forward="true" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+        <state relative-caret-position="525">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/js/transformCSS.js">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/mongo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        <state relative-caret-position="300">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/触摸滑动自动播放.html">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/loginDemo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2001">
-          <caret line="173" column="34" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
+        <state relative-caret-position="378">
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/css/index.css">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/public/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="800">
+          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/index.html">
+    <entry file="file://$PROJECT_DIR$/src/ajaxLearn/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/快速滑动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="91" column="74" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GIT/hello.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="13" selection-start-column="13" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/移动端触屏案例/js/swiper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
+        <state relative-caret-position="1176">
+          <caret line="301" column="77" selection-start-line="301" selection-start-column="77" selection-end-line="301" selection-end-column="77" />
         </state>
       </provider>
     </entry>

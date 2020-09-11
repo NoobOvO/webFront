@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="form">
+  <input type="text" name="username" >
+  <input type="text" name="password" >
+  <input type="button" value="提交" id="btn"/>
+</form>
+</body>
+<script src="ajax.js"></script>
+<script>
+  let form=document.querySelector("#form");
+  let btn= document.querySelector("#btn");
+  let former;
+  btn.onclick=function () {
+    former=new FormData(form);
+    let xhr =new XMLHttpRequest();
+    xhr.open("post","http://localhost/formdata");
+    xhr.send(former);
+    xhr.onload=function () {
+      console.log(xhr.responseText);
+    }
+  }
+</script>
+</html>

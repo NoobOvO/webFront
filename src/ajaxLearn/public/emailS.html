@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    input{
+      width: 1000px;
+      height: 50px;
+    }
+  </style>
+
+</head>
+<body>
+<!--邮箱表单验证案例-->
+<form>
+  <h3>邮箱</h3>
+  <input type="text"  placeholder="请输入邮箱地址" name="email" id="email"/>
+  <p id="info"></p>
+</form>
+
+</body>
+<script src="ajax.js"></script>
+<script>
+   let email=document.querySelector("#email");
+   let info=document.querySelector("#info");
+   email.onblur=function () {
+       //邮箱正则
+       var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+       if(!reg.test(this.value)){
+         info.innerHTML="邮箱地址格式不符合规范";
+         info.style.color="red";
+       }else {
+         info.innerHTML="";
+       }
+       //邮箱不能为空
+      if(this.value==""){
+        info.innerHTML="邮箱地址不能为空";
+        info.style.color="red";
+        return;
+      }
+
+       //验证邮箱有没有重名
+       ajax({
+         method:"get",
+         data:{email:email.value},
+         url:"http://localhost/email",
+         success:function (msg,obj) {
+           msg=JSON.parse(msg);
+           info.innerHTML=msg.msg;
+           info.style.color="yellow";
+         },
+         error:function (msg,obj) {
+           console.log(msg);
+           msg=JSON.parse(msg);
+           info.innerHTML=msg.msg;
+           info.style.color="red";
+         }
+       })
+
+
+
+
+   }
+
+
+
+
+</script>
+</html>

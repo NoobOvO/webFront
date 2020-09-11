@@ -1,0 +1,41 @@
+const fs =require("fs");
+//如何解决回调地狱
+function f1() {
+  return new Promise((resolve,reject)=>{
+    fs.readFile("./file/1.txt","utf8",function (err,doc) {
+      resolve(doc);
+    });
+  })
+}
+function f2() {
+  return new Promise((resolve,reject)=>{
+    fs.readFile("./file/2.txt","utf8",function (err,doc) {
+      resolve(doc);
+    });
+  })
+}
+function f3() {
+  return new Promise((resolve,reject)=>{
+    fs.readFile("./file/3.txt","utf8",function (err,doc) {
+      resolve(doc);
+    });
+  })
+}
+f1().then((doc)=>{
+      console.log(doc);
+      return f2();
+}).then((doc)=>{
+  console.log(doc);
+  return f3();
+}).then((doc)=>{
+  console.log(doc);
+})
+/*
+PS D:\stromboy\src\node> node .\Promise2
+1111111111111111111111
+
+222222222222222222222
+
+333333333333333333333
+
+ */

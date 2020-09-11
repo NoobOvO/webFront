@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+</head>
+<body>
+
+</body>
+<script>
+  //原生JS ajax
+  //创建AJAX对象
+  const xhr=new XMLHttpRequest();
+
+  //中推
+  xhr.open("get","http://localhost/first");
+
+  //发送
+  xhr.send();
+
+  //让服务端返还客户端数据
+  //ps:因为请求响应有时间 且不固定 所以无法在send里添加响应的参数 于是需要一个Onload事件进行处理
+  xhr.onload=function () {
+    console.log(xhr.responseText);
+  }
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,15 @@
+const express=require("express");
+//post接参 前提  npm install body-parser
+//导入
+const  bodyPareser=require("body-parser");
+const  app=express();
+//拦截所有请求 对post参数解析成对象
+//false为querystring解析 官方推荐  true为qs解析
+app.use(bodyPareser.urlencoded({extend:false}));
+app.post("/add",(req,rsp)=>{
+  rsp.send(req.body);
+});
+
+
+
+app.listen(80);

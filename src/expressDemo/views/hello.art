@@ -1,0 +1,7 @@
+{{meg}}
+<ul>
+{{each users}}
+<li>{{$value.name}}</li>
+<li>{{$value.age}}</li>
+{{/each}}
+</ul>

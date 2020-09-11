@@ -1,0 +1,12 @@
+const fs=require("fs");
+const  promisify=require("util").promisify;
+const   read=promisify(fs.readFile); //包裹成promise对象
+async function ft(){
+  const r1=await read("./file/1.txt","utf8"); //异步函数 可以对promise对象使用await await如果不成功就不往下执行
+  const r2=await read("./file/2.txt","utf8");
+  const r3=await read("./file/3.txt","utf8");
+  console.log(r1);  //异步函数依次执行
+  console.log(r2);
+  console.log(r3);
+}
+ft(); //实现了异步函数多个执行 并简化了书写方法 避免了回调函数地狱写法

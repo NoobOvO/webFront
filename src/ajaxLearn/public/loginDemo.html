@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+<form>
+  <div class="form-group" id="form">
+    <label >Name</label>
+    <input type="text" class="form-control" id="username" placeholder="请输入姓名">
+  </div>
+  <div class="form-group">
+    <label >Password</label>
+    <input type="text" class="form-control" id="password" placeholder="请输入密码">
+  </div>
+  <button type="button" class="btn btn-danger" id="btn">检测登录状态</button>
+</form>
+</body>
+<script src="ajax.js"></script>
+<script>
+  let username=document.querySelector("#username");
+  let password=document.querySelector("#password");
+  let btn=document.querySelector("#btn");
+  let form=document.querySelector("#form");
+  btn.onclick=function () {
+    let xhr=new XMLHttpRequest();
+    xhr.open("get","http://localhost:3000/demo3?"+"username="+username.value);
+    xhr.withCredentials=true;
+    xhr.send();
+    xhr.onload=function () {
+      console.log(xhr.responseText);
+    }
+
+
+  }
+</script>
+</html>

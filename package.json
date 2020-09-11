@@ -76,5 +76,10 @@
     "modernizr-config.json",
     "README.md"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-less": "^4.0.1",
+    "nodemon": "^2.0.4"
+  }
 }
